@@ -1,6 +1,7 @@
-package edu.icet.model.Entity;
+package edu.icet.model.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.*;
 
@@ -12,8 +13,9 @@ import lombok.*;
 @Entity
 
 public class CustomerLoginDetailsEntity {
-    @Id
+
     private String userName;
+    @Id
     private String email;
     private String password;
 
