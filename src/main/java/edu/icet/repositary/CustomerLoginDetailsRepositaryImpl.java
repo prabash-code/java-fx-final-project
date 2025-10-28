@@ -1,6 +1,6 @@
 package edu.icet.repositary;
 
-import edu.icet.model.Entity.CustomerLoginDetailsEntity;
+import edu.icet.model.entity.CustomerLoginDetailsEntity;
 import edu.icet.util.hibernate.Hibernate;
 
 public class CustomerLoginDetailsRepositaryImpl implements CustomerLoginDetailsRepositary{

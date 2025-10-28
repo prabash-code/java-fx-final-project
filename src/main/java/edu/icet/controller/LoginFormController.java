@@ -14,6 +14,7 @@ import java.io.IOException;
 
 public class LoginFormController {
 
+    public PasswordField passwordField;
     @FXML
     private Button btnForgotPassword;
 
@@ -39,11 +40,20 @@ public class LoginFormController {
 
     @FXML
     void forgotPasswordOnAction(ActionEvent event) {
+        Stage forgotPasswordStage= new Stage();
+        try {
+            forgotPasswordStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ForgetPassword.xml.fxml"))));
+            forgotPasswordStage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
     @FXML
     void loginOnAction(ActionEvent event) {
+        String userName=txtUserName.getText();
+        String password=passwordField.getText();
 
     }
 

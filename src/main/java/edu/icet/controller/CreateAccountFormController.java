@@ -1,11 +1,9 @@
 
 package edu.icet.controller;
 
-import edu.icet.model.Entity.CustomerLoginDetailsEntity;
 import edu.icet.model.dto.CustomerLoginDetails;
 import edu.icet.service.CustomerLoginDetailsService;
 import edu.icet.service.CustomerLoginDetailsServiceImpl;
-import edu.icet.util.hibernate.Hibernate;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

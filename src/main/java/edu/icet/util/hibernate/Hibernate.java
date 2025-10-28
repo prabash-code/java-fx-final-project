@@ -1,6 +1,6 @@
 package edu.icet.util.hibernate;
 
-import edu.icet.model.Entity.CustomerLoginDetailsEntity;
+import edu.icet.model.entity.CustomerLoginDetailsEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

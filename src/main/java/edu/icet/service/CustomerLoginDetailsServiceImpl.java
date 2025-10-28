@@ -1,6 +1,6 @@
 package edu.icet.service;
 
-import edu.icet.model.Entity.CustomerLoginDetailsEntity;
+import edu.icet.model.entity.CustomerLoginDetailsEntity;
 import edu.icet.model.dto.CustomerLoginDetails;
 import edu.icet.repositary.CustomerLoginDetailsRepositary;
 import edu.icet.repositary.CustomerLoginDetailsRepositaryImpl;
