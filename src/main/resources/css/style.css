@@ -1,0 +1,127 @@
+
+.homePageStaff-button{
+    -fx-background-color: #00BFA6;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.homePageCustomerPortral-button  {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #00BFA6;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.homePageLogin-button{
+    -fx-background-color: #00BFA6;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.homePageContactUs-button  {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.homePageAbout-button  {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.root{
+     -fx-background-color:#EEF4EB;
+}
+
+.homePageWelcome-note{
+            -fx-background-color: transparent;
+            -fx-text-fill: #FFFFFF;
+            -fx-background-radius: 8;
+            -fx-font-size: 25px;
+            -fx-font-weight: bold;
+
+}
+
+.homePageAbout-note{
+            -fx-background-color: transparent;
+            -fx-text-fill: #FFFFFF;
+            -fx-background-radius: 8;
+            -fx-font-size: 15px;
+            -fx-font-weight: bold;
+
+}
+
+.homePageLogo-text{
+            -fx-background-color: transparent;
+            -fx-text-fill: #B4E29F;
+            -fx-background-radius: 8;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+
+}
+
+.userLoging-label{
+        -fx-text-fill: #5B5B5B;
+
+}
+
+.userLogingLog-btn{
+            -fx-background-color:#00BFA6;
+            -fx-text-fill: #FFFFFF;
+            -fx-background-radius: 8;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+
+.userLogingBackToHome-btn{
+            -fx-background-color:transparent;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 8;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+
+
+.userLogingBackToHome-btn{
+            -fx-background-color:transparent;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 8;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+
+
+.userRegister-btn{
+           -fx-background-color:transparent;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 8;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+
+.userSelection-btn{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 8;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+
+.adminSelection-btn{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 8;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+
