@@ -18,7 +18,7 @@
       <Label layoutX="41.0" layoutY="271.0" text="Don't have an account?" textFill="#948989" />
       <Button fx:id="btnRegister" layoutX="167.0" layoutY="269.0" mnemonicParsing="false" onAction="#registerOnAction" styleClass="userRegister-btn" text="Register" />
       <Button fx:id="backToHomebtn" layoutX="214.0" layoutY="310.0" mnemonicParsing="false" onAction="#backToHomeBtnOnAction" prefHeight="36.0" prefWidth="104.0" styleClass="userLogingBackToHome-btn" text="Back to Home" />
-      <TextField alignment="CENTER" layoutX="85.0" layoutY="92.0" promptText="Email" />
-      <PasswordField alignment="CENTER" layoutX="85.0" layoutY="132.0" promptText="Password" />
+      <TextField fx:id="txtEmailBtn" alignment="CENTER" layoutX="85.0" layoutY="92.0" promptText="Email" />
+      <PasswordField fx:id="txtPasswordBtn" alignment="CENTER" layoutX="85.0" layoutY="132.0" promptText="Password" />
    </children>
 </AnchorPane>

@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class User {
-    private Long userId;
+    private String userId;
     private String name;
     private String email;
     private String password;

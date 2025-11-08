@@ -1,9 +1,7 @@
 
 package edu.icet.controller;
 
-import edu.icet.model.dto.CustomerLoginDetails;
-import edu.icet.service.CustomerLoginDetailsService;
-import edu.icet.service.CustomerLoginDetailsServiceImpl;
+import edu.icet.service.UserRegistrationService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -27,14 +25,10 @@ public class CreateAccountFormController {
 
     @FXML
     void createAccountOnAction(ActionEvent event) {
-        CustomerLoginDetailsService customerLoginDetailsService=new CustomerLoginDetailsServiceImpl();
-
-        CustomerLoginDetails customerLoginDetails = new CustomerLoginDetails(txtUserName.getText(), txtEmail.getText(), txtPassword.getText());
-        customerLoginDetailsService.addCustomerLogingDetails(customerLoginDetails);
-
 
 
     }
+
     @FXML
     void emailOnAction(ActionEvent event) {
 
