@@ -102,6 +102,14 @@
             -fx-font-weight: bold;
 }
 
+.registerPageBtnBack{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 8;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+
 .userSelection-btn{
             -fx-background-color:00BFA6;
             -fx-text-fill: #00BFA6;
