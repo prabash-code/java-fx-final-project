@@ -4,5 +4,6 @@ import edu.icet.model.dto.User;
 
 public interface UserRegistrationRepository {
     void registerNewUser(User user);
-    public void getData();
+
+    String getNewId(String rolePrefix);
 }

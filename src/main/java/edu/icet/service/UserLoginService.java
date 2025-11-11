@@ -1,5 +1,7 @@
 package edu.icet.service;
 
 public interface UserLoginService {
-    void checkPassword(String text, String text1);
+    String checkPassword(String email);
+
+    String checkUserRole(String email);
 }

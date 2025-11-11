@@ -1,6 +1,6 @@
 package edu.icet.controller;
 
-public class DashboardFormController {
+public class UserDashboardFormController {
 
     public class PleaseProvideControllerClassName {
 

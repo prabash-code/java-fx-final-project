@@ -1,7 +1,6 @@
 package edu.icet.model.dto;
 
 import lombok.*;
-
 @Setter
 @Getter
 @NoArgsConstructor

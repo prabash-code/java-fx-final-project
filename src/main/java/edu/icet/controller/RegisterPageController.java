@@ -2,6 +2,7 @@ package edu.icet.controller;
 
 import edu.icet.model.dto.User;
 import edu.icet.service.Impl.UserRegistrationServiceImpl;
+import edu.icet.service.UserLoginService;
 import edu.icet.service.UserRegistrationService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,8 +14,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -65,18 +64,7 @@ public class RegisterPageController implements Initializable {
 
     private String getNewId() {
         String role=cmbRole.getValue();
-        if(role.equals("Admin")){
-            adminCount++;
-            return String.format("A%03d",adminCount);
-        }
-        else if(role.equals("Staff")){
-            staffCount++;
-            return String.format("S%03d",staffCount);
-        }
-        else{
-            customerCount++;
-            return String.format("C%03d",customerCount);
-        }
+        return userRegistrationService.generateNewUserId(role.substring(0,1));
     }
 
     @Override
@@ -85,7 +73,6 @@ public class RegisterPageController implements Initializable {
                 "Admin",
                     "Staff",
                     "Customer"
-
         );
 
         cmbRole.setItems(userType);

@@ -7,13 +7,6 @@
     -fx-font-weight: bold;
 }
 
-.homePageCustomerPortral-button  {
-    -fx-background-color: #FFFFFF;
-    -fx-text-fill: #00BFA6;
-    -fx-background-radius: 8;
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-}
 
 .homePageLogin-button{
     -fx-background-color: #00BFA6;

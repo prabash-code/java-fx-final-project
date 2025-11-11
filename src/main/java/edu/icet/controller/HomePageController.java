@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,47 +15,43 @@ public class HomePageController {
     private Button btnAbout;
 
     @FXML
-    private Button btnContactUs;
-
-    @FXML
-    private Button btnCustomerPortral;
+    private Button btnContact;
 
     @FXML
     private Button btnLogin;
 
     @FXML
-    private ImageView myImageView;
-
-    @FXML
     void btnAboutOnAction(ActionEvent event) {
-        Stage aboutStage=new Stage();
-
-
-    }
-
-    @FXML
-    void btnContactUsOnAction(ActionEvent event) {
-        Stage contactUs=new Stage();
-
-    }
-
-    @FXML
-    void btnCustomerPortalOnAction(ActionEvent event) {
-        Stage customerPortral =new Stage();
-
-
-    }
-
-    @FXML
-    void btnLoginOnAction(ActionEvent event) {
-        Stage loginStage =new Stage();
+        Stage about =new Stage();
         try {
-            loginStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/userLoginForm.fxml"))));
-            loginStage.show();
+            about.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/About.fxml"))));
+            about.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
+    }
+
+    @FXML
+    void btnContactOnAction(ActionEvent event) {
+        Stage contactUs= new Stage();
+        try {
+            contactUs.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ContactUs.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @FXML
+    void loginButtonOnAction(ActionEvent event) {
+        Stage login =new Stage();
+        try {
+            login.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/userLoginForm.fxml"))));
+            login.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

@@ -2,6 +2,7 @@ package edu.icet.controller;
 
 import edu.icet.service.Impl.UserLoginServiceImpl;
 import edu.icet.service.UserLoginService;
+import edu.icet.util.Security;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,59 +16,80 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class userLoginFormController {
-    UserLoginService userLoginService=new UserLoginServiceImpl();
 
-    @FXML
-    private Button backToHomebtn;
+    private UserLoginService userLoginService = new UserLoginServiceImpl();
 
-    @FXML
-    private Button btnLogin;
-
-    @FXML
-    private TextField txtEmailBtn;
-
-    @FXML
-    private PasswordField txtPasswordBtn;
-
-    @FXML
-    private Button btnRegister;
+    @FXML private Button backToHomebtn;
+    @FXML private Button btnLogin;
+    @FXML private TextField txtEmailBtn;
+    @FXML private PasswordField txtPasswordBtn;
+    @FXML private Button btnRegister;
 
     @FXML
     void backToHomeBtnOnAction(ActionEvent event) {
-
-
-        Stage backToHome=new Stage();
         try {
+            Stage backToHome = new Stage();
             backToHome.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/HomePage.fxml"))));
             backToHome.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @FXML
     void loginOnAction(ActionEvent event) {
+        String email = txtEmailBtn.getText();
+        String password = txtPasswordBtn.getText();
 
+        // 1. Get stored hash
+        String hashCode = userLoginService.checkPassword(email);
 
-    }
+        if(hashCode == null){
+            new Alert(Alert.AlertType.ERROR,"Email not registered!").show();
+            return;
+        }
 
-    @FXML
-    void registerOnAction(ActionEvent event) {
-        Stage registerStage= new Stage();
+        // 2. Verify password
+        boolean isCorrect = false;
         try {
-            registerStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/RegisterPage.fxml"))));
-            registerStage.show();
-            Alert alert=new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText("Registered !!");
-            alert.setContentText("Welcome to HealthNetPharmacy ");
+            isCorrect = Security.verifyPassword(password, hashCode);
+        } catch (IllegalArgumentException e){
+            new Alert(Alert.AlertType.ERROR,"Invalid stored password hash!").show();
+            return;
+        }
+
+        if(!isCorrect){
+            new Alert(Alert.AlertType.ERROR,"Incorrect password!").show();
+            return;
+        }
+
+        // 3. Redirect based on role
+        String role = userLoginService.checkUserRole(email);
+        Stage dashboard = new Stage();
+        try {
+            if("Admin".equals(role)){
+                dashboard.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AdminDashBoard.fxml"))));
+            } else if("Staff".equals(role)){
+                dashboard.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/StaffDashboard.fxml"))));
+
+            } else {
+                new Alert(Alert.AlertType.ERROR,"Role not found!").show();
+                return;
+            }
+            dashboard.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-    public void checkPassword(){
 
-        userLoginService.checkPassword(txtEmailBtn.getText(),txtPasswordBtn.getText());
+    @FXML
+    void registerOnAction(ActionEvent event) {
+        try {
+            Stage registerStage = new Stage();
+            registerStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/RegisterPage.fxml"))));
+            registerStage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
-
 }
