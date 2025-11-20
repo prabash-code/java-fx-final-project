@@ -52,8 +52,6 @@ public class UserLoginDetailsRepositoryImpl implements UserLoginDetailsRepositor
                      return "Admin";
                  }else if(idOfUser.substring(0,1).equalsIgnoreCase("S")){
                      return "Staff";
-                 } else if (idOfUser.substring(0,1).equalsIgnoreCase("C")) {
-                     return "Customer";
                  }
             }
 

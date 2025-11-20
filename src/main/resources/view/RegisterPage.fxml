@@ -75,6 +75,6 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="515.0" layoutY="351.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="70.0" styleClass="registerPageBtnBack" stylesheets="@../css/style.css" text="Back" />
+      <Button fx:id="btnBack" layoutX="515.0" layoutY="351.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="22.0" prefWidth="70.0" styleClass="registerPageBtnBack" stylesheets="@../css/style.css" text="Back" />
    </children>
 </AnchorPane>
