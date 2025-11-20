@@ -126,3 +126,80 @@
             -fx-font-weight: bold;
 }
 
+.btnAddMedicine{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+.btnDeleteMedicine{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+.btnUpdateMedicine{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}.btnSearchMedicine{
+            -fx-background-color:Transparent;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+.btnClearMedicine{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+.btnAddSuppliers{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+.btnDeleteSuppliers{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+.btnUpdateSuppliers{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+.btnClearSuppliers{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+.btnAddToCart{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}.btnPlaceOrder{
+            -fx-background-color:00BFA6;
+            -fx-text-fill: #00BFA6;
+            -fx-background-radius: 6;
+            -fx-font-size: 10px;
+            -fx-font-weight: bold;
+}
+
+

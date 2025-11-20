@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="edu.icet.controller.SalesController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="529.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SalesController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="563.0" fitWidth="958.0" layoutX="-8.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/comDashboard.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="872.0" layoutY="27.0" text="User" />
+      <TableView layoutX="217.0" layoutY="104.0" prefHeight="275.0" prefWidth="457.0">
+        <columns>
+          <TableColumn prefWidth="65.5999755859375" text="colItemId" />
+          <TableColumn prefWidth="139.199951171875" text="colName" />
+            <TableColumn prefWidth="62.4000244140625" text="colQuantity" />
+            <TableColumn prefWidth="64.80001831054688" text="colUnit Price" />
+            <TableColumn prefWidth="61.5999755859375" text="colTotal" />
+            <TableColumn prefWidth="61.5999755859375" text="colDate" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtItemId" layoutX="755.0" layoutY="216.0" />
+      <Label layoutX="688.0" layoutY="220.0" text="Item Id :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="684.0" layoutY="251.0" text="Name :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNameOfMedicine" layoutX="758.0" layoutY="251.0" text="Name Of Medicine" />
+      <Label layoutX="684.0" layoutY="289.0" text="Quantity :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="682.0" layoutY="327.0" text="Unit Price :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="682.0" layoutY="360.0" text="Date :" />
+      <Label layoutX="731.0" layoutY="444.0" text="Net Total :" textAlignment="RIGHT" textFill="#cf2d2d">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" layoutX="815.0" layoutY="448.0" text="00.00" />
+      <TextField fx:id="txtQuantity" layoutX="755.0" layoutY="285.0" />
+      <DatePicker fx:id="txtDate" layoutX="754.0" layoutY="356.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label fx:id="lblPrice" layoutX="755.0" layoutY="327.0" text="Price" />
+      <Button fx:id="btnAddToCart" layoutX="758.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnAddToCartOnAction" styleClass="btnAddToCart" stylesheets="@../css/style.css" text="Add to Cart" />
+      <Separator layoutX="681.0" layoutY="445.0" prefHeight="3.0" prefWidth="264.0" />
+      <Button fx:id="btnPlaceOrder" layoutX="758.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" styleClass="btnPlaceOrder" stylesheets="@../css/style.css" text="Place Order" />
+      <Separator layoutX="681.0" layoutY="199.0" prefHeight="3.0" prefWidth="264.0" />
+      <Label layoutX="688.0" layoutY="104.0" text="Oredr Id :" />
+      <Label layoutX="687.0" layoutY="130.0" text="Customer Name :" />
+      <Label layoutX="686.0" layoutY="162.0" text="Customer Email :" />
+      <TextField fx:id="txtCustomername" layoutX="782.0" layoutY="126.0" />
+      <TextField fx:id="txtCustomerEmail" layoutX="782.0" layoutY="158.0" />
+      <Label fx:id="lblId" layoutX="791.0" layoutY="104.0" text="Id" />
+      <Label layoutX="763.0" layoutY="67.0" prefHeight="26.0" prefWidth="100.0" text="Order Details">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="682.0" layoutY="94.0" prefHeight="3.0" prefWidth="264.0" />
+      <Button fx:id="btnDashbar" layoutX="45.0" layoutY="83.0" mnemonicParsing="false" onAction="#btnDashbarOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnMedicine" layoutX="45.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnSupplier" layoutX="45.0" layoutY="171.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnSales" layoutX="45.0" layoutY="216.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnSalesHistory" layoutX="45.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnReports" layoutX="45.0" layoutY="307.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnNotification" layoutX="45.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnSettings" layoutX="45.0" layoutY="398.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnLogout" layoutX="14.0" layoutY="476.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+   </children>
 </AnchorPane>

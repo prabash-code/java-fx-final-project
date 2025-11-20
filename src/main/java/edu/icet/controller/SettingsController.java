@@ -3,22 +3,18 @@ package edu.icet.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.Label;
 
-public class SalesHistoryController {
+public class SettingsController {
 
     @FXML
     private Button btnDashboard;
 
     @FXML
-    private Button btnLogout;
-
-    @FXML
     private Button btnMedicine;
 
     @FXML
-    private Button btnNotification;
+    private Button btnNotifications;
 
     @FXML
     private Button btnReports;
@@ -36,33 +32,13 @@ public class SalesHistoryController {
     private Button btnSuppliers;
 
     @FXML
-    private TableColumn<?, ?> colCustomerName;
+    private Button btnlogout;
 
     @FXML
-    private TableColumn<?, ?> colDate;
-
-    @FXML
-    private TableColumn<?, ?> colEmail;
-
-    @FXML
-    private TableColumn<?, ?> colOrderId;
-
-    @FXML
-    private TableColumn<?, ?> colStaff;
-
-    @FXML
-    private TableColumn<?, ?> colTotal;
-
-    @FXML
-    private TableView<?> tblSalesHistory;
+    private Label lblUser;
 
     @FXML
     void btnDashboardOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void btnLogoutOnAction(ActionEvent event) {
 
     }
 
@@ -72,7 +48,7 @@ public class SalesHistoryController {
     }
 
     @FXML
-    void btnNotificationOnAction(ActionEvent event) {
+    void btnNotificationsOnAction(ActionEvent event) {
 
     }
 
@@ -98,6 +74,11 @@ public class SalesHistoryController {
 
     @FXML
     void btnSuppliersOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnlogoutOnAction(ActionEvent event) {
 
     }
 
