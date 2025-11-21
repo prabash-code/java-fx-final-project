@@ -1,7 +1,6 @@
 package edu.icet.model.dto;
 
 import lombok.*;
-
 import java.time.LocalDate;
 
 @Setter
@@ -11,12 +10,14 @@ import java.time.LocalDate;
 @ToString
 
 public class Medicine {
-    private Long medicineId;
-    private Long suppliedId;
-    private String name;
+    private String medicineId;
     private String brand;
-    private String category;
-    private LocalDate expireDate;
-    private String quantity;
+    private String name;
+    private String suppliedId;
     private Double unitPrice;
+    private int quantity;
+    private LocalDate manufactureDate;
+    private LocalDate expireDate;
+
+
 }
