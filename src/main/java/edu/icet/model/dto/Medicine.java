@@ -13,7 +13,7 @@ public class Medicine {
     private String medicineId;
     private String brand;
     private String name;
-    private String suppliedId;
+    private String supplierId;
     private Double unitPrice;
     private int quantity;
     private LocalDate manufactureDate;

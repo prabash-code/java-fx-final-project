@@ -3,6 +3,7 @@ package edu.icet.repositary.Impl;
 import edu.icet.db.DBConnection;
 import edu.icet.model.dto.Medicine;
 import edu.icet.repositary.MedicineRepository;
+import javafx.collections.ObservableList;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -31,11 +32,65 @@ public class MedicineRepositoryImpl implements MedicineRepository {
             preparedStatement.setObject(1,medicine.getMedicineId());
             preparedStatement.setObject(2,medicine.getBrand());
             preparedStatement.setObject(3,medicine.getName());
-            preparedStatement.setObject(4,medicine.getSuppliedId());
+            preparedStatement.setObject(4,medicine.getSupplierId());
             preparedStatement.setObject(5,medicine.getUnitPrice());
             preparedStatement.setObject(6,medicine.getQuantity());
             preparedStatement.setObject(7,medicine.getManufactureDate());
             preparedStatement.setObject(8,medicine.getExpireDate());
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public ResultSet getAllMedicine() {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("Select * from medicine");
+            return preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @Override
+    public ResultSet searchItem(String text) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("Select * from medicine where name=?");
+            preparedStatement.setObject(1,text);
+           return  preparedStatement.executeQuery();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @Override
+    public void updateMedicine(Medicine medicine) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("UPDATE medicine SET brand=?, supplierId=?, unitPrice=?, quantity=?, manufactureDate=?, expireDate=? WHERE name=?");
+            preparedStatement.setObject(1,medicine.getBrand());
+            preparedStatement.setObject(2,medicine.getSupplierId());
+            preparedStatement.setObject(3,medicine.getUnitPrice());
+            preparedStatement.setObject(4,medicine.getQuantity());
+            preparedStatement.setObject(5,medicine.getManufactureDate());
+            preparedStatement.setObject(6,medicine.getExpireDate());
+            preparedStatement.setObject(7,medicine.getName());
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void deleteMedicine(String text) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("Delete from medicine where name =?");
+            preparedStatement.setObject(1,text);
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {

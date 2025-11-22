@@ -3,21 +3,20 @@ package edu.icet.controller;
 import edu.icet.model.dto.Medicine;
 import edu.icet.service.Impl.MedicineServiceImpl;
 import edu.icet.service.MedicineService;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
@@ -91,13 +90,11 @@ public class MedicineController implements Initializable {
     @FXML
     private TableColumn<?, ?> colUnitPrice;
 
-
-
     @FXML
     private Label lblUser;
 
     @FXML
-    private TableView<?> tblMedicine;
+    private TableView<Medicine> tblMedicine;
 
     @FXML
     private TextField txtBrandName;
@@ -136,6 +133,8 @@ public class MedicineController implements Initializable {
                 LocalDate.parse(txtExpireDate.getText()))
 
         );
+        loadTable();
+        btnClearOnAction(event);
 
     }
 
@@ -175,6 +174,9 @@ public class MedicineController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        medicineService.deleteMedicine(txtMedicineName.getText());
+        loadTable();
+        btnClearOnAction(event);
 
     }
 
@@ -191,7 +193,13 @@ public class MedicineController implements Initializable {
 
     @FXML
     void btnMedicineOnAction(ActionEvent event) {
-
+        Stage stageMedicine = new Stage();
+        try {
+            stageMedicine.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Medicine.fxml"))));
+            stageMedicine.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
@@ -203,7 +211,6 @@ public class MedicineController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @FXML
@@ -241,9 +248,32 @@ public class MedicineController implements Initializable {
         }
 
     }
-
+//Search Medicine
     @FXML
     void btnSearchOnAction(ActionEvent event) {
+
+        try {
+            Medicine medicine = medicineService.searchMedicine(txtSearch.getText());
+            ObservableList<Medicine> list = FXCollections.observableArrayList();
+            if (medicine == null) {
+                new Alert(Alert.AlertType.ERROR, "No medicine found!").show();
+                return;
+            }
+            list.add(new Medicine(
+                    medicine.getMedicineId(),
+                    medicine.getBrand(),
+                    medicine.getName(),
+                    medicine.getSupplierId(),
+                    medicine.getUnitPrice(),
+                    medicine.getQuantity(),
+                    medicine.getManufactureDate(),
+                    medicine.getExpireDate()));
+            tblMedicine.setItems(list);
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -271,6 +301,20 @@ public class MedicineController implements Initializable {
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+        medicineService.UpdateMedicine(
+                new Medicine(generatedId(),
+                        txtBrandName.getText(),
+                        txtMedicineName.getText(),
+                        txtCompany.getText(),
+                        Double.parseDouble(txtUnitPrice.getText()),
+                        Integer.parseInt(txtQuantity.getText()),
+                        LocalDate.parse(txtManufactureDate.getText()),
+                        LocalDate.parse(txtExpireDate.getText()))
+
+        );
+        loadTable();
+        btnClearOnAction(event);
+
 
     }
 
@@ -285,7 +329,24 @@ public class MedicineController implements Initializable {
         colManufacDate.setCellValueFactory(new PropertyValueFactory<>("manufactureDate"));
         colExpDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
 
+        loadTable();
 
+        tblMedicine.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                txtBrandName.setText(newSelection.getBrand());
+                txtMedicineName.setText(newSelection.getName());
+                txtCompany.setText(newSelection.getSupplierId());
+                txtUnitPrice.setText(String.valueOf(newSelection.getUnitPrice()));
+                txtQuantity.setText(String.valueOf(newSelection.getQuantity()));
+                txtManufactureDate.setText(newSelection.getManufactureDate().toString());
+                txtExpireDate.setText(newSelection.getExpireDate().toString());
+            }
+        });
     }
+
+    private void loadTable(){
+        tblMedicine.setItems(medicineService.getAll());
+    }
+
 
 }
