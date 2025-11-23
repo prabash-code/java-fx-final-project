@@ -1,9 +1,8 @@
-package edu.icet.repositary.Impl;
+package edu.icet.repositary.impl;
 
 import edu.icet.db.DBConnection;
 import edu.icet.model.dto.Medicine;
 import edu.icet.repositary.MedicineRepository;
-import javafx.collections.ObservableList;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -71,7 +70,7 @@ public class MedicineRepositoryImpl implements MedicineRepository {
     @Override
     public void updateMedicine(Medicine medicine) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("UPDATE medicine SET brand=?, supplierId=?, unitPrice=?, quantity=?, manufactureDate=?, expireDate=? WHERE name=?");
+            PreparedStatement preparedStatement = connection.prepareStatement("UPDATE medicine SET brand=?, supplierId=?, unitPrice=?, quantity=?, manufactureDate=?, expireDate=? name=? where medicineId=?");
             preparedStatement.setObject(1,medicine.getBrand());
             preparedStatement.setObject(2,medicine.getSupplierId());
             preparedStatement.setObject(3,medicine.getUnitPrice());
@@ -79,6 +78,7 @@ public class MedicineRepositoryImpl implements MedicineRepository {
             preparedStatement.setObject(5,medicine.getManufactureDate());
             preparedStatement.setObject(6,medicine.getExpireDate());
             preparedStatement.setObject(7,medicine.getName());
+            preparedStatement.setObject(8,medicine.getMedicineId());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -89,7 +89,7 @@ public class MedicineRepositoryImpl implements MedicineRepository {
     @Override
     public void deleteMedicine(String text) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("Delete from medicine where name =?");
+            PreparedStatement preparedStatement = connection.prepareStatement("Delete from medicine where medicineId =?");
             preparedStatement.setObject(1,text);
             preparedStatement.executeUpdate();
 

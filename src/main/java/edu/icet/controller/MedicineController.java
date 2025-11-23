@@ -1,7 +1,7 @@
 package edu.icet.controller;
 
 import edu.icet.model.dto.Medicine;
-import edu.icet.service.Impl.MedicineServiceImpl;
+import edu.icet.service.impl.MedicineServiceImpl;
 import edu.icet.service.MedicineService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -94,6 +94,9 @@ public class MedicineController implements Initializable {
     private Label lblUser;
 
     @FXML
+    private Label lblMedicineId;
+
+    @FXML
     private TableView<Medicine> tblMedicine;
 
     @FXML
@@ -163,6 +166,7 @@ public class MedicineController implements Initializable {
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
+        lblMedicineId.setText("");
         txtBrandName.setText("");
         txtMedicineName.setText("");
         txtCompany.setText("");
@@ -174,10 +178,9 @@ public class MedicineController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-        medicineService.deleteMedicine(txtMedicineName.getText());
+        medicineService.deleteMedicine(lblMedicineId.getText());
         loadTable();
         btnClearOnAction(event);
-
     }
 
     @FXML
@@ -302,7 +305,7 @@ public class MedicineController implements Initializable {
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
         medicineService.UpdateMedicine(
-                new Medicine(generatedId(),
+                new Medicine(lblMedicineId.getText(),
                         txtBrandName.getText(),
                         txtMedicineName.getText(),
                         txtCompany.getText(),
@@ -333,6 +336,7 @@ public class MedicineController implements Initializable {
 
         tblMedicine.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
+                lblMedicineId.setText(newSelection.getMedicineId());
                 txtBrandName.setText(newSelection.getBrand());
                 txtMedicineName.setText(newSelection.getName());
                 txtCompany.setText(newSelection.getSupplierId());

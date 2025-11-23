@@ -12,24 +12,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="529.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SalesController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="563.0" fitWidth="958.0" layoutX="-8.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="555.0" fitWidth="961.0" layoutX="-11.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/comDashboard.png" />
          </image>
       </ImageView>
       <Label layoutX="872.0" layoutY="27.0" text="User" />
-      <TableView layoutX="217.0" layoutY="104.0" prefHeight="275.0" prefWidth="457.0">
+      <TableView layoutX="208.0" layoutY="104.0" prefHeight="275.0" prefWidth="468.0">
         <columns>
-          <TableColumn prefWidth="65.5999755859375" text="colItemId" />
-          <TableColumn prefWidth="139.199951171875" text="colName" />
-            <TableColumn prefWidth="62.4000244140625" text="colQuantity" />
-            <TableColumn prefWidth="64.80001831054688" text="colUnit Price" />
-            <TableColumn prefWidth="61.5999755859375" text="colTotal" />
-            <TableColumn prefWidth="61.5999755859375" text="colDate" />
+          <TableColumn prefWidth="80.00007629394531" text="ItemId" />
+          <TableColumn prefWidth="124.79998779296875" text="Name" />
+            <TableColumn prefWidth="62.4000244140625" text="Quantity" />
+            <TableColumn prefWidth="64.80001831054688" text="Unit Price" />
+            <TableColumn prefWidth="61.5999755859375" text="Total" />
+            <TableColumn prefWidth="71.20001220703125" text="Date" />
         </columns>
       </TableView>
       <TextField fx:id="txtItemId" layoutX="755.0" layoutY="216.0" />

@@ -1,7 +1,7 @@
-package edu.icet.service.Impl;
+package edu.icet.service.impl;
 
 import edu.icet.model.dto.Medicine;
-import edu.icet.repositary.Impl.MedicineRepositoryImpl;
+import edu.icet.repositary.impl.MedicineRepositoryImpl;
 import edu.icet.repositary.MedicineRepository;
 import edu.icet.service.MedicineService;
 import javafx.collections.FXCollections;

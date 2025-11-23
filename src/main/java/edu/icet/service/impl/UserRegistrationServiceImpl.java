@@ -1,12 +1,10 @@
-package edu.icet.service.Impl;
+package edu.icet.service.impl;
 
 import edu.icet.model.dto.User;
-import edu.icet.repositary.Impl.UserRegistrationRepositoryImpl;
+import edu.icet.repositary.impl.UserRegistrationRepositoryImpl;
 import edu.icet.repositary.UserRegistrationRepository;
 import edu.icet.service.UserRegistrationService;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 
 public class UserRegistrationServiceImpl implements UserRegistrationService {

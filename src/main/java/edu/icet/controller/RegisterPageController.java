@@ -1,8 +1,7 @@
 package edu.icet.controller;
 
 import edu.icet.model.dto.User;
-import edu.icet.service.Impl.UserRegistrationServiceImpl;
-import edu.icet.service.UserLoginService;
+import edu.icet.service.impl.UserRegistrationServiceImpl;
 import edu.icet.service.UserRegistrationService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

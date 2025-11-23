@@ -40,10 +40,10 @@
       <Button fx:id="btnAdd" layoutX="757.0" layoutY="310.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="74.0" styleClass="btnAddMedicine" stylesheets="@../css/style.css" text="Add" />
       <Button fx:id="btnDelete" layoutX="758.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="73.0" styleClass="btnDeleteMedicine" stylesheets="@../css/style.css" text="Delete" />
       <Button fx:id="btnUpdate" layoutX="758.0" layoutY="379.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="74.0" styleClass="btnUpdateMedicine" stylesheets="@../css/style.css" text="Update" />
-      <TextField fx:id="txtBrandName" layoutX="221.0" layoutY="310.0" promptText="Brand Name" />
-      <TextField fx:id="txtMedicineName" layoutX="221.0" layoutY="345.0" promptText="Medicine Name" />
-      <TextField fx:id="txtCompany" layoutX="221.0" layoutY="379.0" promptText="Company" />
-      <TextField fx:id="txtUnitPrice" layoutX="221.0" layoutY="414.0" promptText="Unit Price" />
+      <TextField fx:id="txtBrandName" layoutX="221.0" layoutY="346.0" promptText="Brand Name" />
+      <TextField fx:id="txtMedicineName" layoutX="221.0" layoutY="379.0" promptText="Medicine Name" />
+      <TextField fx:id="txtCompany" layoutX="221.0" layoutY="415.0" promptText="Company" />
+      <TextField fx:id="txtUnitPrice" layoutX="441.0" layoutY="415.0" promptText="Unit Price" />
       <TextField fx:id="txtManufactureDate" layoutX="440.0" layoutY="379.0" promptText="Manufactured Date" />
       <TextField fx:id="txtExpireDate" layoutX="440.0" layoutY="344.0" promptText="Expire Date" />
       <TextField fx:id="txtQuantity" layoutX="440.0" layoutY="310.0" promptText="Quantity" />
@@ -52,5 +52,7 @@
       <Label fx:id="lblUser" layoutX="764.0" layoutY="23.0" prefHeight="18.0" prefWidth="46.0" text="User" />
       <Button fx:id="btnSearch" layoutX="773.0" layoutY="62.0" mnemonicParsing="false" onAction="#btnSearchOnAction" styleClass="btnSearchMedicine" stylesheets="@../css/style.css" text="Search" />
       <TextField fx:id="txtSearch" layoutX="615.0" layoutY="60.0" />
+      <Label layoutX="221.0" layoutY="315.0" text="Medicine ID :" />
+      <Label fx:id="lblMedicineId" layoutX="296.0" layoutY="315.0" text="medicine id" />
    </children>
 </AnchorPane>

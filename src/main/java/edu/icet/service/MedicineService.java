@@ -1,6 +1,7 @@
 package edu.icet.service;
 
 import edu.icet.model.dto.Medicine;
+import edu.icet.model.dto.Supplier;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
 
@@ -17,4 +18,5 @@ public interface MedicineService {
     void UpdateMedicine(Medicine medicine);
 
     void deleteMedicine(String text);
+
 }

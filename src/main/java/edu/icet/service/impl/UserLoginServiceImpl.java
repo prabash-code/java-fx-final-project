@@ -1,13 +1,8 @@
-package edu.icet.service.Impl;
+package edu.icet.service.impl;
 
-import edu.icet.repositary.Impl.UserLoginDetailsRepositoryImpl;
+import edu.icet.repositary.impl.UserLoginDetailsRepositoryImpl;
 import edu.icet.repositary.UserLoginDetailsRepository;
 import edu.icet.service.UserLoginService;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class UserLoginServiceImpl implements UserLoginService {
     UserLoginDetailsRepository userLoginDetailsRepository = new UserLoginDetailsRepositoryImpl();

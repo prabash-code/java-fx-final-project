@@ -1,4 +1,4 @@
-package edu.icet.repositary.Impl;
+package edu.icet.repositary.impl;
 
 import edu.icet.db.DBConnection;
 import edu.icet.repositary.UserLoginDetailsRepository;

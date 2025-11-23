@@ -8,10 +8,9 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class Supplier {
-    private Long supplierId;
+    private String supplierId;
     private String name;
     private String company;
     private String email;
     private String phone;
-    private String address;
 }
