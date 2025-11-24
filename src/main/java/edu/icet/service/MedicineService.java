@@ -5,6 +5,7 @@ import edu.icet.model.dto.Supplier;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableSet;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 
 public interface MedicineService {

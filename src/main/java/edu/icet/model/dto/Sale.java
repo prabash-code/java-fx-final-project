@@ -10,8 +10,9 @@ import java.time.LocalDate;
 @ToString
 
 public class Sale {
-    private Long saleId;
-    private Long customerId;
+    private String saleId;
     private LocalDate saleDate;
-    private double totalAmount;
+    private String customerName;
+    private String customerEmail;
+
 }

@@ -15,15 +15,17 @@ public class DBConnection {
             throw new RuntimeException(e);
         }
     }
-    public static DBConnection getInstance(){
-        if(instance!=null){
+
+    public static DBConnection getInstance() {
+        if (instance != null) {
             return instance;
         }
-        return new DBConnection();
+        instance = new DBConnection();
+        return instance;
     }
 
-    public Connection getConnection(){
-                return connection;
+    public Connection getConnection() {
+        return connection;
     }
 
 }

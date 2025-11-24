@@ -1,17 +1,21 @@
 package edu.icet.service.impl;
 
+import edu.icet.db.DBConnection;
 import edu.icet.model.dto.Medicine;
 import edu.icet.repositary.impl.MedicineRepositoryImpl;
 import edu.icet.repositary.MedicineRepository;
 import edu.icet.service.MedicineService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
 public class MedicineServiceImpl implements MedicineService {
+    Connection connection = DBConnection.getInstance().getConnection();
     MedicineRepository medicineRepository = new MedicineRepositoryImpl();
 
     @Override
@@ -64,26 +68,34 @@ public class MedicineServiceImpl implements MedicineService {
 
     @Override
     public Medicine searchMedicine(String text) throws SQLException {
+        try {
+            ResultSet resultSet = medicineRepository.searchItem(connection,text);
+            if (resultSet.next()) {
+                return new Medicine(
+                        resultSet.getString("medicineId"),
+                        resultSet.getString("brand"),
+                        resultSet.getString("name"),
+                        resultSet.getString("supplierId"),
+                        resultSet.getDouble("unitPrice"),
+                        resultSet.getInt("quantity"),
+                        resultSet.getDate("manufactureDate").toLocalDate(),
+                        resultSet.getDate("expireDate").toLocalDate());
 
-        ResultSet resultSet = medicineRepository.searchItem(text);
-        if (!resultSet.next()) {
-            return null;
+            }else{
+                return null;
+            }
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR,"This is not at database").show();
+            throw new RuntimeException(e);
         }
-        return new Medicine(
-                resultSet.getString("medicineId"),
-                resultSet.getString("brand"),
-                resultSet.getString("name"),
-                resultSet.getString("supplierId"),
-                resultSet.getDouble("unitPrice"),
-                resultSet.getInt("quantity"),
-                resultSet.getDate("manufactureDate").toLocalDate(),
-                resultSet.getDate("expireDate").toLocalDate());
 
     }
 
+
     @Override
     public void UpdateMedicine(Medicine medicine) {
-        medicineRepository.updateMedicine(medicine);
+
+        medicineRepository.updateMedicine(connection, medicine);
     }
 
     @Override
