@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class userLoginFormController {
+public class UserLoginFormController {
 
     private UserLoginService userLoginService = new UserLoginServiceImpl();
 

@@ -47,7 +47,7 @@ public class HomePageController {
     void loginButtonOnAction(ActionEvent event) {
         Stage login =new Stage();
         try {
-            login.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/userLoginForm.fxml"))));
+            login.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserLoginForm.fxml"))));
             login.show();
         } catch (IOException e) {
             throw new RuntimeException(e);

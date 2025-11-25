@@ -8,11 +8,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SalesHistoryController">
+<AnchorPane prefHeight="527.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SalesHistoryController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="551.0" fitWidth="960.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="609.0" fitWidth="936.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/comDashboard.png" />
          </image>
@@ -27,14 +26,12 @@
       <Button fx:id="btnSettings" layoutX="60.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="154.0" text="Button" />
       <Button fx:id="btnLogout" layoutX="60.0" layoutY="476.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="147.0" text="Button" />
       <Label layoutX="872.0" layoutY="25.0" text="User" />
-      <TableView fx:id="tblSalesHistory" layoutX="333.0" layoutY="114.0" prefHeight="200.0" prefWidth="530.0">
+      <TableView fx:id="tblSalesHistory" layoutX="384.0" layoutY="154.0" prefHeight="200.0" prefWidth="364.0">
         <columns>
           <TableColumn fx:id="colOrderId" prefWidth="75.0" text="OredrId" />
           <TableColumn fx:id="colCustomerName" prefWidth="101.5999755859375" text="Customer Name" />
             <TableColumn fx:id="colDate" prefWidth="67.20001220703125" text="Date" />
             <TableColumn fx:id="colEmail" prefWidth="117.5999755859375" text="Customer Email" />
-            <TableColumn fx:id="colTotal" prefWidth="84.0" text="Total Amount" />
-            <TableColumn fx:id="colStaff" prefWidth="84.0" text="Cashier/Staff" />
         </columns>
       </TableView>
    </children>

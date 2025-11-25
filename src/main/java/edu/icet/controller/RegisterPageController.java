@@ -56,7 +56,7 @@ public class RegisterPageController implements Initializable {
         ));
 
 //        try {
-//         userLoginStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/userLoginForm.fxml"))));
+//         userLoginStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserLoginForm.fxml"))));
 //           userLoginStage.show();
 //        } catch (IOException e) {
 //            throw new RuntimeException(e);
@@ -67,7 +67,7 @@ public class RegisterPageController implements Initializable {
     void btnBackOnAction(ActionEvent event) {
         Stage log =new Stage();
         try {
-            log.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/userLoginForm.fxml"))));
+            log.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserLoginForm.fxml"))));
             log.show();
         } catch (IOException e) {
             throw new RuntimeException(e);

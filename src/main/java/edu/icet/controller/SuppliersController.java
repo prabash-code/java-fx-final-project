@@ -146,7 +146,7 @@ public class SuppliersController implements Initializable {
     void btnLogoutOnAction(ActionEvent event) {
         Stage logOut =new Stage();
         try {
-            logOut.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/userLoginForm.fxml"))));
+            logOut.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserLoginForm.fxml"))));
             logOut.show();
         } catch (IOException e) {
             throw new RuntimeException(e);

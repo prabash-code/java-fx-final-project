@@ -201,5 +201,30 @@
             -fx-font-size: 10px;
             -fx-font-weight: bold;
 }
+.btn-generate-medicine-report{
+             -fx-background-color:00BFA6;
+             -fx-text-fill: #00BFA6;
+             -fx-background-radius: 6;
+             -fx-font-size: 15px;
+             -fx-font-weight: bold;
+ }.btn-generate-supplier-report{
+             -fx-background-color:00BFA6;
+             -fx-text-fill: #00BFA6;
+             -fx-background-radius: 6;
+             -fx-font-size: 15px;
+             -fx-font-weight: bold;
+ }.btn-generate-sales-report{
+             -fx-background-color:00BFA6;
+             -fx-text-fill: #00BFA6;
+             -fx-background-radius: 6;
+             -fx-font-size: 15px;
+             -fx-font-weight: bold;
+ }.btn-generate-notification-report{
+             -fx-background-color:00BFA6;
+             -fx-text-fill: #00BFA6;
+             -fx-background-radius: 6;
+             -fx-font-size: 15px;
+             -fx-font-weight: bold;
+ }
 
 

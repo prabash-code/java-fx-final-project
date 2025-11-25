@@ -163,7 +163,7 @@ public class SalesController implements Initializable {
     void btnLogoutOnAction(ActionEvent event) {
         Stage logout = new Stage();
         try {
-            logout.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/userLoginForm.fxml"))));
+            logout.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserLoginForm.fxml"))));
             logout.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
