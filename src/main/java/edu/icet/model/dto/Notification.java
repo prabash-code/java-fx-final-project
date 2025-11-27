@@ -2,6 +2,8 @@ package edu.icet.model.dto;
 
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -9,9 +11,12 @@ import lombok.*;
 @ToString
 
 public class Notification {
-    private Long notificationId;
-    private Long userId;
-    private String type;
-    private String message;
-    private String createdDate;
+
+    private String medicineId;
+    private String supplierId;
+    private String name;
+    private LocalDate expireDate;
+    private Integer qty;
+    private String email;
+
 }

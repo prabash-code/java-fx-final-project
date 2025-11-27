@@ -2,20 +2,22 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.NotificationController">
+<AnchorPane prefHeight="484.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.NotificationController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="lblUser" fitHeight="556.0" fitWidth="980.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="lblUser" fitHeight="515.0" fitWidth="916.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/comDashboard.png" />
          </image>
       </ImageView>
-      <Label layoutX="887.0" layoutY="24.0" text="User" />
+      <Label layoutX="831.0" layoutY="24.0" text="User" />
       <Button fx:id="btnDashboard" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="189.0" text="Button" />
       <Button fx:id="btnMedicine" layoutX="14.0" layoutY="129.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="190.0" text="Button" />
       <Button fx:id="btnSupplier" layoutX="21.0" layoutY="175.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" opacity="0.0" prefHeight="26.0" prefWidth="181.0" text="Button" />
@@ -25,5 +27,34 @@
       <Button fx:id="btnNotification" layoutX="2.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="208.0" text="Button" />
       <Button fx:id="btnSettings" layoutX="9.0" layoutY="409.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="200.0" text="Button" />
       <Button fx:id="btnLogout" layoutX="10.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="200.0" text="Button" />
+      <TableView fx:id="tblNotification" layoutX="239.0" layoutY="118.0" prefHeight="142.0" prefWidth="615.0">
+        <columns>
+          <TableColumn fx:id="colMedicineId" prefWidth="75.0" text="Medicine Id" />
+          <TableColumn fx:id="colMedicineName" prefWidth="124.0" text="Medicine name" />
+            <TableColumn fx:id="colTypeOfIssue" prefWidth="108.80001831054688" text="Type of Issue" />
+            <TableColumn fx:id="colDate" prefWidth="93.60003662109375" text="Expire Date " />
+            <TableColumn fx:id="colCompany" prefWidth="86.39990234375" text="Supplier" />
+            <TableColumn fx:id="colSupplierMail" prefWidth="124.79997558593755" text="Supplier mail" />
+        </columns>
+      </TableView>
+      <Label layoutX="498.0" layoutY="80.0" text="Expiry Notification" textFill="#b42b2b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="483.0" layoutY="301.0" text="Low Stock Notification" textFill="#659641">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblLowStockNotification" layoutX="275.0" layoutY="333.0" prefHeight="134.0" prefWidth="555.0">
+         <columns>
+            <TableColumn fx:id="colQtyMedicineId" prefWidth="75.0" text="Medicine Id" />
+            <TableColumn fx:id="colQtymedicineName" prefWidth="107.20001220703125" text="Medicine Name" />
+            <TableColumn fx:id="colQuantity" prefWidth="99.19998168945312" text="Quantity Status" />
+            <TableColumn fx:id="colQtySuppliers" prefWidth="99.19998168945312" text="Supplier" />
+            <TableColumn fx:id="colQtySuppliersMail" prefWidth="177.5999755859375" text=" Supplier mail" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>
