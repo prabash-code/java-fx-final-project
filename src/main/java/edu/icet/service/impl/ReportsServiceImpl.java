@@ -10,8 +10,8 @@ import com.itextpdf.text.pdf.PdfWriter;
 import edu.icet.model.dto.Medicine;
 import edu.icet.model.dto.SalesHistory;
 import edu.icet.model.dto.Supplier;
-import edu.icet.repositary.ReportsRepository;
-import edu.icet.repositary.impl.ReportsRepositoryImpl;
+import edu.icet.repository.ReportsRepository;
+import edu.icet.repository.impl.ReportsRepositoryImpl;
 import edu.icet.service.ReportsService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -51,6 +51,7 @@ public class ReportsServiceImpl implements ReportsService {
 
             }
             generatePdf(list);
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -252,7 +253,7 @@ public class ReportsServiceImpl implements ReportsService {
                 table.addCell(new PdfPCell(new Phrase(medicine.getName())));
                 table.addCell(new PdfPCell(new Phrase(medicine.getSupplierId())));
                 table.addCell(new PdfPCell(new Phrase(String.valueOf(medicine.getUnitPrice()))));
-                table.addCell(new PdfPCell(new Phrase(medicine.getQuantity())));
+                table.addCell(new PdfPCell(new Phrase(String.valueOf(medicine.getQuantity()))));
                 table.addCell(new PdfPCell(new Phrase(medicine.getManufactureDate().toString())));
                 table.addCell(new PdfPCell(new Phrase(medicine.getExpireDate().toString())));
 

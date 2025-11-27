@@ -2,8 +2,8 @@ package edu.icet.service.impl;
 
 import edu.icet.db.DBConnection;
 import edu.icet.model.dto.Medicine;
-import edu.icet.repositary.impl.MedicineRepositoryImpl;
-import edu.icet.repositary.MedicineRepository;
+import edu.icet.repository.impl.MedicineRepositoryImpl;
+import edu.icet.repository.MedicineRepository;
 import edu.icet.service.MedicineService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

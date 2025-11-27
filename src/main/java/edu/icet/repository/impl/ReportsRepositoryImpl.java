@@ -1,7 +1,7 @@
-package edu.icet.repositary.impl;
+package edu.icet.repository.impl;
 
 import edu.icet.db.DBConnection;
-import edu.icet.repositary.ReportsRepository;
+import edu.icet.repository.ReportsRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
