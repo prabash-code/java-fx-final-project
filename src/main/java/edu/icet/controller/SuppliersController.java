@@ -239,6 +239,7 @@ public class SuppliersController implements Initializable {
                 txtCompanyName.getText(),
                 txtEmail.getText(),
                 txtContactNumber.getText()
+
                 ));
         loadTable();
         btnClearOnAction(event);

@@ -14,4 +14,6 @@ public interface SalesService {
     String getLastOrderId();
 
     Medicine SerchMedicine(String medicineName) throws SQLException;
+
+    ObservableList<Sale> getAll();
 }

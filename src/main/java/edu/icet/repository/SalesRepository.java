@@ -10,4 +10,5 @@ public interface SalesRepository {
 
     void addSales(Connection connection, Sale sale);
 
+    ResultSet getAllSaleDetails();
 }

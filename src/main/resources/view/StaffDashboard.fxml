@@ -10,55 +10,56 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="389.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.StaffDashBoardController">
+<AnchorPane prefHeight="470.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.StaffDashBoardController">
    <children>
-      <ImageView fitHeight="417.0" fitWidth="734.0" layoutX="-10.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="440.0" fitWidth="745.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="483.0" fitWidth="860.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/comDashboard.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="lblUser" layoutX="685.0" layoutY="14.0" text="User" />
-      <Button fx:id="btnStaffDashboard" layoutX="14.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="130.0" text="Button" />
-      <Button fx:id="btnMedicine" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
-      <Button fx:id="btnSuppliers" layoutX="14.0" layoutY="134.0" mnemonicParsing="false" onAction="#btnSuppliersOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
-      <Button fx:id="btnSales" layoutX="14.0" layoutY="170.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
-      <Button fx:id="btnSalesHistory" layoutX="14.0" layoutY="197.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
-      <Button fx:id="btnReports" layoutX="14.0" layoutY="232.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
-      <Button fx:id="btnNotification" layoutX="14.0" layoutY="267.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
-      <Button fx:id="btnSetting" layoutX="14.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnSettingOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
+            <Image url="@../img/staff_db.png" />
+         </image></ImageView>
+      <Button fx:id="btnStaffDashboard" layoutX="18.0" layoutY="75.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="130.0" text="Button" />
+      <Button fx:id="btnMedicine" layoutX="14.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
+      <Button fx:id="btnSuppliers" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnSuppliersOnAction" opacity="0.0" prefHeight="26.0" prefWidth="169.0" text="Button" />
+      <Button fx:id="btnSales" layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
+      <Button fx:id="btnSalesHistory" layoutX="14.0" layoutY="228.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="169.0" text="Button" />
+      <Button fx:id="btnReports" layoutX="14.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="169.0" text="Button" />
+      <Button fx:id="btnNotification" layoutX="14.0" layoutY="311.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="169.0" text="Button" />
       <Button fx:id="btnLogout" layoutX="14.0" layoutY="366.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
-      <TableView fx:id="tblAvailability" layoutX="238.0" layoutY="97.0" prefHeight="73.0" prefWidth="426.0">
+      <TableView fx:id="tblAvailability" layoutX="304.0" layoutY="98.0" prefHeight="73.0" prefWidth="429.0">
         <columns>
-          <TableColumn fx:id="colName" prefWidth="100.800048828125" text="Name" />
-          <TableColumn fx:id="btnBrand" prefWidth="79.20001220703125" text="Brand" />
-            <TableColumn fx:id="btnUnitPrice" prefWidth="83.20001220703125" text="Unit Price" />
-            <TableColumn fx:id="availableQuantity" prefWidth="85.59994506835938" text="Available Qty" />
-            <TableColumn fx:id="colExpiryDate" prefWidth="75.20001220703125" text="Expiry Date" />
+          <TableColumn fx:id="colSearchName" prefWidth="91.0" text="Name" />
+          <TableColumn fx:id="colSearchSupplier" prefWidth="90.0" text="Supplier" />
+            <TableColumn fx:id="colSearchUnitprice" prefWidth="83.20001220703125" text="Unit Price" />
+            <TableColumn fx:id="colSearchAvailableQuantity" prefWidth="85.59994506835938" text="Available Qty" />
+            <TableColumn fx:id="colSearchExpiryDate" prefWidth="75.20001220703125" text="Expiry Date" />
         </columns>
       </TableView>
-      <Button fx:id="btnSearch" layoutX="645.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="Search" />
-      <TextField fx:id="txtSearch" layoutX="489.0" layoutY="64.0" />
-      <TableView fx:id="tblHistory" layoutX="174.0" layoutY="210.0" prefHeight="160.0" prefWidth="226.0">
+      <Button fx:id="btnSearch" layoutX="709.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="Search" />
+      <TextField fx:id="txtSearch" layoutX="550.0" layoutY="63.0" />
+      <TableView fx:id="tblHistory" layoutX="199.0" layoutY="210.0" prefHeight="160.0" prefWidth="226.0">
         <columns>
-          <TableColumn fx:id="colsaleId" prefWidth="75.0" text="Sale Id" />
-          <TableColumn fx:id="colDate" prefWidth="75.0" text="Date" />
-            <TableColumn fx:id="colTotal" prefWidth="75.0" text="Total" />
+          <TableColumn fx:id="colSalesSaleId" prefWidth="75.0" text="Sale Id" />
+          <TableColumn fx:id="colSalesDate" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="colSalesTotal" prefWidth="75.0" text="Total" />
         </columns>
       </TableView>
-      <Label layoutX="174.0" layoutY="187.0" text="Sales History">
+      <Label layoutX="202.0" layoutY="188.0" text="Sales History">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TableView fx:id="tblNotification" layoutX="433.0" layoutY="210.0" prefHeight="160.0" prefWidth="301.0">
+      <TableView fx:id="tblNotification" layoutX="457.0" layoutY="210.0" prefHeight="160.0" prefWidth="397.0">
         <columns>
-          <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
-          <TableColumn fx:id="colBrand" prefWidth="75.0" text="Brand" />
-            <TableColumn fx:id="colIssue" prefWidth="75.0" text="Issue" />
-            <TableColumn fx:id="colDate" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="colNotificationName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="colNotificationSupplierId" prefWidth="134.0" text="SupplierId" />
+            <TableColumn fx:id="colNotificationIssue" prefWidth="107.0" text="Issue" />
+            <TableColumn fx:id="colNotificationDate" text="Date" />
         </columns>
       </TableView>
-      <Label layoutX="433.0" layoutY="187.0" text="Notification" />
+      <Label layoutX="484.0" layoutY="188.0" text="Notification">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnSales" layoutX="9.0" layoutY="193.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="25.0" prefWidth="169.0" text="Button" />
+      <Button fx:id="btnLogout" layoutX="4.0" layoutY="417.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="25.0" prefWidth="183.0" text="Button" />
    </children>
 </AnchorPane>

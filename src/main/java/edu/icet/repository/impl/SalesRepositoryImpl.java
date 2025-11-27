@@ -38,4 +38,15 @@ public class SalesRepositoryImpl implements SalesRepository {
         }
     }
 
+    @Override
+    public ResultSet getAllSaleDetails() {
+        Connection connection1=DBConnection.getInstance().getConnection();
+        try {
+            PreparedStatement preparedStatement = connection1.prepareStatement("Select * from sales");
+            return preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
