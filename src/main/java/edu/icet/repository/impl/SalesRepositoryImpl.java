@@ -25,12 +25,13 @@ public class SalesRepositoryImpl implements SalesRepository {
     @Override
     public void addSales(Connection connection,Sale sale) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO sales (saleId, saleDate, customerName,customerEmail) VALUES (?,?,?,?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO sales (saleId, saleDate, customerName,customerEmail,total) VALUES (?,?,?,?,?)");
 
             preparedStatement.setObject(1,sale.getSaleId());
             preparedStatement.setObject(2,sale.getSaleDate());
             preparedStatement.setObject(3,sale.getCustomerName());
             preparedStatement.setObject(4,sale.getCustomerEmail());
+            preparedStatement.setObject(5,sale.getTotal());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);

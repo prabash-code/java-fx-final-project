@@ -135,6 +135,7 @@ public class SalesController implements Initializable {
         txtDate.setValue(null);
         lblPrice.setText("");
         lblNameOfMedicine.setText("");
+        lblNetTotal.setText("");
 
     }
 
@@ -200,7 +201,8 @@ public class SalesController implements Initializable {
                 lblId.getText(),
                 LocalDate.now(),
                 txtCustomername.getText(),
-                txtCustomerEmail.getText()
+                txtCustomerEmail.getText(),
+                Double.parseDouble(lblNetTotal.getText())
         ),list);
 
         Stage sales=new Stage();

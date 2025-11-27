@@ -14,5 +14,6 @@ public class Sale {
     private LocalDate saleDate;
     private String customerName;
     private String customerEmail;
+    private double total;
 
 }
