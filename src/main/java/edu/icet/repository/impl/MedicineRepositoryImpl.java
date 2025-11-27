@@ -1,8 +1,8 @@
-package edu.icet.repositary.impl;
+package edu.icet.repository.impl;
 
 import edu.icet.db.DBConnection;
 import edu.icet.model.dto.Medicine;
-import edu.icet.repositary.MedicineRepository;
+import edu.icet.repository.MedicineRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

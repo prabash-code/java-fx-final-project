@@ -1,7 +1,7 @@
 package edu.icet.service.impl;
 
-import edu.icet.repositary.impl.UserLoginDetailsRepositoryImpl;
-import edu.icet.repositary.UserLoginDetailsRepository;
+import edu.icet.repository.impl.UserLoginDetailsRepositoryImpl;
+import edu.icet.repository.UserLoginDetailsRepository;
 import edu.icet.service.UserLoginService;
 
 public class UserLoginServiceImpl implements UserLoginService {

@@ -1,21 +1,33 @@
 package edu.icet.controller;
 
+import edu.icet.model.dto.Medicine;
+import edu.icet.service.MedicineService;
+import edu.icet.service.impl.MedicineServiceImpl;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDate;
+import java.util.ResourceBundle;
 
-public class AdminDashBoardController {
+public class AdminDashBoardController implements Initializable {
 
-    @FXML
-    private LineChart<?, ?> adminChart;
 
     @FXML
     private Button btnDashboard;
@@ -23,11 +35,8 @@ public class AdminDashBoardController {
     @FXML
     private Button btnLogout;
 
-
     @FXML
     private Button btnMedicine;
-
-
 
     @FXML
     private Button btnNotification;
@@ -54,10 +63,19 @@ public class AdminDashBoardController {
     private TableColumn<?, ?> colId;
 
     @FXML
-    private TableColumn<?, ?> colIssue;
+    private TableColumn<Medicine, String> colIssue;
 
     @FXML
     private TableColumn<?, ?> colName;
+
+    @FXML
+    private Label lblUser;
+
+    @FXML
+    private TableView<Medicine> tblAdminIssue;
+
+    @FXML
+    private BarChart<?, ?> chartAdminSalesDetails;
 
     @FXML
     void adminChartOnAction(MouseEvent event) {
@@ -83,7 +101,7 @@ public class AdminDashBoardController {
 
     @FXML
     void btnLogoutOnAction(ActionEvent event) {
-        Stage logout= new Stage();
+        Stage logout = new Stage();
         try {
             logout.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserLoginForm.fxml"))));
             logout.show();
@@ -107,7 +125,7 @@ public class AdminDashBoardController {
 
     @FXML
     void btnNotificationOnAction(ActionEvent event) {
-        Stage notification  = new Stage();
+        Stage notification = new Stage();
         try {
             notification.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Notification.fxml"))));
             notification.show();
@@ -162,6 +180,39 @@ public class AdminDashBoardController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        MedicineService medicineService = new MedicineServiceImpl();
+        XYChart.Series set1 = new XYChart.Series<>();
+
+        ObservableList<Medicine> medicineNameList = medicineService.getAll();
+        for (Medicine medicine : medicineNameList) {
+            set1.getData().add(new XYChart.Data(medicine.getName(), medicine.getQuantity()));
+        }
+        chartAdminSalesDetails.getData().addAll(set1);
+
+        colId.setCellValueFactory(new PropertyValueFactory<>("medicineId"));
+        colBrand.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("supplierId"));
+        colIssue.setCellValueFactory(cellData -> {
+            LocalDate expireDate = cellData.getValue().getExpireDate();
+            LocalDate date = LocalDate.now();
+            String issue;
+            if (expireDate.isBefore(date)) {
+                issue = "Recently Expired";
+            } else if (!expireDate.isAfter(date.plusDays(20))) {
+                issue = "Expiring Soon";
+
+            } else {
+                issue = "Valid";
+            }
+            return new SimpleStringProperty(issue);
+        });
+
+        tblAdminIssue.setItems(medicineService.getAll());
 
     }
 

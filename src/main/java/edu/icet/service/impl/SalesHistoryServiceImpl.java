@@ -1,8 +1,8 @@
 package edu.icet.service.impl;
 
 import edu.icet.model.dto.SalesHistory;
-import edu.icet.repositary.SalesHistoryRepository;
-import edu.icet.repositary.impl.SalesHistoryRepositoryImpl;
+import edu.icet.repository.SalesHistoryRepository;
+import edu.icet.repository.impl.SalesHistoryRepositoryImpl;
 import edu.icet.service.SalesHistoryService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

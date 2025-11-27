@@ -1,8 +1,8 @@
 package edu.icet.service.impl;
 
 import edu.icet.model.dto.User;
-import edu.icet.repositary.impl.UserRegistrationRepositoryImpl;
-import edu.icet.repositary.UserRegistrationRepository;
+import edu.icet.repository.impl.UserRegistrationRepositoryImpl;
+import edu.icet.repository.UserRegistrationRepository;
 import edu.icet.service.UserRegistrationService;
 
 import java.sql.Connection;

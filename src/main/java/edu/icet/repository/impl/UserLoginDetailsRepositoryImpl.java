@@ -1,7 +1,7 @@
-package edu.icet.repositary.impl;
+package edu.icet.repository.impl;
 
 import edu.icet.db.DBConnection;
-import edu.icet.repositary.UserLoginDetailsRepository;
+import edu.icet.repository.UserLoginDetailsRepository;
 import javafx.scene.control.Alert;
 
 import java.sql.Connection;

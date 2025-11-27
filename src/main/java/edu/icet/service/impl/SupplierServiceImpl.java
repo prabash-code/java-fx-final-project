@@ -1,11 +1,12 @@
 package edu.icet.service.impl;
 
 import edu.icet.model.dto.Supplier;
-import edu.icet.repositary.impl.SupplierRepositoryImpl;
-import edu.icet.repositary.SupplierRepository;
+import edu.icet.repository.impl.SupplierRepositoryImpl;
+import edu.icet.repository.SupplierRepository;
 import edu.icet.service.SupplierService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +17,15 @@ public class SupplierServiceImpl implements SupplierService {
 
     @Override
     public void addNewSupplier(Supplier supplier) {
-        supplierRepository.addNewSupplier(supplier);
+        try{
+            supplierRepository.addNewSupplier(supplier);
+        } catch (RuntimeException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Duplicate Supplier Detected");
+            alert.setContentText("A supplier with this name or ID already exists. Please try again.");
+            alert.showAndWait();
+        }
+
     }
 
     @Override
@@ -36,7 +45,10 @@ public class SupplierServiceImpl implements SupplierService {
                 );
             }
         } catch (SQLException e) {
+
+
             throw new RuntimeException(e);
+
         }
         return list;
     }

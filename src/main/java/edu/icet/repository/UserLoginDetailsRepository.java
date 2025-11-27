@@ -1,7 +1,5 @@
-package edu.icet.repositary;
+package edu.icet.repository;
 
-
-import java.sql.ResultSet;
 
 public interface UserLoginDetailsRepository {
     public String searchByEmail(String email);

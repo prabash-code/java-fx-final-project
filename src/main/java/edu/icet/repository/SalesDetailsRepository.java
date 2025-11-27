@@ -1,4 +1,4 @@
-package edu.icet.repositary;
+package edu.icet.repository;
 
 import edu.icet.model.dto.SaleDetails;
 

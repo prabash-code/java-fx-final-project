@@ -1,7 +1,6 @@
-package edu.icet.repositary;
+package edu.icet.repository;
 
 import edu.icet.model.dto.Supplier;
-import javafx.collections.ObservableList;
 
 import java.sql.ResultSet;
 

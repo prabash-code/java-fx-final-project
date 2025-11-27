@@ -1,8 +1,8 @@
-package edu.icet.repositary.impl;
+package edu.icet.repository.impl;
 
 import edu.icet.db.DBConnection;
 import edu.icet.model.dto.Supplier;
-import edu.icet.repositary.SupplierRepository;
+import edu.icet.repository.SupplierRepository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
