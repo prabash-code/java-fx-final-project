@@ -21,4 +21,6 @@ public interface MedicineService {
     void deleteMedicine(String text);
 
 
+    Medicine searchMedicineByName(String text);
 }
+

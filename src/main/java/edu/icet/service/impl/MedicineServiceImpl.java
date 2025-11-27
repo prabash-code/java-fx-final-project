@@ -102,5 +102,30 @@ public class MedicineServiceImpl implements MedicineService {
     public void deleteMedicine(String text) {
         medicineRepository.deleteMedicine(text);
     }
+
+    @Override
+    public Medicine searchMedicineByName(String text) {
+        try {
+            ResultSet resultSet = medicineRepository.searchItemByName(connection, text);
+            if (resultSet.next()) {
+                return new Medicine(
+                        resultSet.getString("medicineId"),
+                        resultSet.getString("brand"),
+                        resultSet.getString("name"),
+                        resultSet.getString("supplierId"),
+                        resultSet.getDouble("unitPrice"),
+                        resultSet.getInt("quantity"),
+                        resultSet.getDate("manufactureDate").toLocalDate(),
+                        resultSet.getDate("expireDate").toLocalDate());
+
+            } else {
+                return null;
+            }
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, "This is not at database").show();
+            throw new RuntimeException(e);
+        }
+    }
+
 }
 

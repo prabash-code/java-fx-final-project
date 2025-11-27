@@ -63,7 +63,8 @@ public class MedicineRepositoryImpl implements MedicineRepository {
     }
 
     @Override
-    public ResultSet searchItem(Connection connection,String text) {
+    public ResultSet
+    searchItem(Connection connection,String text) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("Select * from medicine where medicineId=?");
             preparedStatement.setObject(1, text);
@@ -129,6 +130,19 @@ public class MedicineRepositoryImpl implements MedicineRepository {
             preparedStatement.setObject(1, i);
             preparedStatement.setObject(2,medicineId);
             return preparedStatement.executeUpdate()>0;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @Override
+    public ResultSet searchItemByName(Connection connection, String text) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("Select * from medicine where name=?");
+            preparedStatement.setObject(1, text);
+            return preparedStatement.executeQuery();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
