@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="419.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.ForgetEmailController">
+   <children>
+      <AnchorPane prefHeight="423.0" prefWidth="320.0" style="-fx-border-radius: 8px;" styleClass="userLoging-root" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="88.0" layoutY="128.0" styleClass="userLoging-label" text="Forget Password" textFill="#59dc8d">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnVerify" layoutX="113.0" layoutY="268.0" mnemonicParsing="false" onAction="#verifyOnAction" prefHeight="26.0" prefWidth="94.0" styleClass="userLogingLog-btn" text="verify" />
+            <Label layoutX="54.0" layoutY="368.0" text="Register Account?" textFill="#948989" />
+            <Button fx:id="btnRegister" layoutX="159.0" layoutY="366.0" mnemonicParsing="false" onAction="#registerOnAction" styleClass="userRegister-btn" text="Create Account">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="backToHomebtn" layoutX="216.0" layoutY="384.0" mnemonicParsing="false" onAction="#backToHomeBtnOnAction" prefHeight="36.0" prefWidth="104.0" styleClass="userLogingBackToHome-btn" text="Back to Sign In" />
+            <TextField fx:id="txtEmailBtn" alignment="CENTER" layoutX="67.0" layoutY="166.0" prefHeight="26.0" prefWidth="198.0" promptText="Email" />
+            <ImageView fitHeight="67.0" fitWidth="79.0" layoutX="125.0" layoutY="61.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/secure-login.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnForgotPassword" layoutX="128.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnForgotPasswordOnAction" styleClass="btnForgotPassword" stylesheets="@../css/style.css" text="Send OTP?" />
+            <TextField fx:id="txtOTP" alignment="CENTER" layoutX="67.0" layoutY="200.0" prefHeight="26.0" prefWidth="198.0" promptText="Type OTP" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -110,20 +110,9 @@ public class ReportsController {
 
     @FXML
     void btnNotificationReportOnAction(ActionEvent event) {
-
+    reportsService.getAllNotification();
     }
 
-    @FXML
-    void btnReportsOnAction(ActionEvent event) {
-        Stage report=new Stage();
-        try {
-            report.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Reports.fxml"))));
-            report.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
 
     @FXML
     void btnSalesHistoryOnAction(ActionEvent event) {

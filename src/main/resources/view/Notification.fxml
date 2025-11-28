@@ -27,7 +27,7 @@
       <Button fx:id="btnNotification" layoutX="2.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="208.0" text="Button" />
       <Button fx:id="btnSettings" layoutX="9.0" layoutY="409.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="200.0" text="Button" />
       <Button fx:id="btnLogout" layoutX="10.0" layoutY="481.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="200.0" text="Button" />
-      <TableView fx:id="tblNotification" layoutX="239.0" layoutY="118.0" prefHeight="142.0" prefWidth="615.0">
+      <TableView fx:id="tblNotification" layoutX="256.0" layoutY="117.0" prefHeight="142.0" prefWidth="615.0">
         <columns>
           <TableColumn fx:id="colMedicineId" prefWidth="75.0" text="Medicine Id" />
           <TableColumn fx:id="colMedicineName" prefWidth="124.0" text="Medicine name" />

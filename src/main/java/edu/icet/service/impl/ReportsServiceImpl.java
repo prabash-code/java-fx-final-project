@@ -8,6 +8,7 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import edu.icet.model.dto.Medicine;
+import edu.icet.model.dto.Notification;
 import edu.icet.model.dto.SalesHistory;
 import edu.icet.model.dto.Supplier;
 import edu.icet.repository.ReportsRepository;
@@ -30,6 +31,8 @@ public class ReportsServiceImpl implements ReportsService {
     ObservableList<Medicine> list = FXCollections.observableArrayList();
     ObservableList<SalesHistory> listHistory = FXCollections.observableArrayList();
     ObservableList<Supplier> listSuppliers = FXCollections.observableArrayList();
+    ObservableList<Notification> listNotification = FXCollections.observableArrayList();
+
 
     @Override
     public void getAll() {
@@ -98,6 +101,12 @@ public class ReportsServiceImpl implements ReportsService {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+
+    }
+
+    @Override
+    public void getAllNotification() {
 
 
     }

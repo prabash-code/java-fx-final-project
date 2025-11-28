@@ -2,10 +2,11 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SettingsController">
    <children>
@@ -25,5 +26,11 @@
       <Button fx:id="btnNotifications" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnNotificationsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="186.0" text="Button" />
       <Button fx:id="btnSettings" layoutX="14.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="186.0" text="Button" />
       <Button fx:id="btnlogout" layoutX="7.0" layoutY="479.0" mnemonicParsing="false" onAction="#btnlogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="201.0" text="Button" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="234.0" layoutY="83.0" prefHeight="18.0" prefWidth="726.0" text="Add Supplier" textAlignment="JUSTIFY" textFill="#12a95b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="222.0" layoutY="107.0" prefHeight="1.0" prefWidth="743.0" />
    </children>
 </AnchorPane>

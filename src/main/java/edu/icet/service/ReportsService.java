@@ -6,4 +6,6 @@ public interface ReportsService {
     void getAllSales();
 
     void getAllSuppiers();
+
+    void getAllNotification();
 }

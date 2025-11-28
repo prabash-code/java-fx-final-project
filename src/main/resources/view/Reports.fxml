@@ -24,9 +24,8 @@
       <Button fx:id="btnSetting" layoutX="57.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnSettingOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
       <Button fx:id="btnLogout" layoutX="22.0" layoutY="478.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.03" prefHeight="26.0" prefWidth="175.0" text="Button" />
       <Label layoutX="820.0" layoutY="26.0" text="User" />
-      <Button fx:id="btnMedicineReport" layoutX="410.0" layoutY="118.0" mnemonicParsing="false" onAction="#btnMedicineReportOnAction" prefHeight="46.0" prefWidth="230.0" styleClass="btn-generate-medicine-report" stylesheets="@../css/style.css" text="Generate Medicine Report" />
-      <Button fx:id="btnSuppliersReport" layoutX="410.0" layoutY="204.0" mnemonicParsing="false" onAction="#btnSuppliersReportOnAction" prefHeight="46.0" prefWidth="230.0" styleClass="btn-generate-supplier-report" stylesheets="@../css/style.css" text="Generate Suppliers Report" />
-      <Button fx:id="btnSalesReport" layoutX="410.0" layoutY="292.0" mnemonicParsing="false" onAction="#btnSalesReportOnAction" prefHeight="46.0" prefWidth="230.0" styleClass="btn-generate-sales-report" stylesheets="@../css/style.css" text="Generate Sales Report" />
-      <Button fx:id="btnNotificationReport" layoutX="410.0" layoutY="377.0" mnemonicParsing="false" onAction="#btnNotificationReportOnAction" prefHeight="46.0" prefWidth="230.0" styleClass="btn-generate-notification-report" stylesheets="@../css/style.css" text="Generate Notification Report" />
+      <Button fx:id="btnMedicineReport" layoutX="423.0" layoutY="144.0" mnemonicParsing="false" onAction="#btnMedicineReportOnAction" prefHeight="46.0" prefWidth="230.0" styleClass="btn-generate-medicine-report" stylesheets="@../css/style.css" text="Generate Medicine Report" />
+      <Button fx:id="btnSuppliersReport" layoutX="423.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnSuppliersReportOnAction" prefHeight="46.0" prefWidth="230.0" styleClass="btn-generate-supplier-report" stylesheets="@../css/style.css" text="Generate Suppliers Report" />
+      <Button fx:id="btnSalesReport" layoutX="423.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnSalesReportOnAction" prefHeight="46.0" prefWidth="230.0" styleClass="btn-generate-sales-report" stylesheets="@../css/style.css" text="Generate Sales Report" />
    </children>
 </AnchorPane>
