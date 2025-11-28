@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="380.0" prefWidth="600.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.RegisterPageController">
+<AnchorPane prefHeight="380.0" prefWidth="600.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.UserRegisterController">
    <children>
       <ImageView fitHeight="395.0" fitWidth="600.0" opacity="0.97" pickOnBounds="true" preserveRatio="true" styleClass="adminLogingSelection-btn">
          <image>

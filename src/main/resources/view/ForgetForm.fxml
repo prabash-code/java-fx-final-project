@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="419.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.ForgetEmailController">
    <children>
-      <AnchorPane prefHeight="423.0" prefWidth="320.0" style="-fx-border-radius: 8px;" styleClass="userLoging-root" stylesheets="@../css/style.css">
+      <AnchorPane layoutY="4.0" prefHeight="423.0" prefWidth="320.0" style="-fx-border-radius: 8px;" styleClass="userLoging-root" stylesheets="@../css/style.css">
          <children>
             <Label layoutX="88.0" layoutY="128.0" styleClass="userLoging-label" text="Forget Password" textFill="#59dc8d">
                <font>

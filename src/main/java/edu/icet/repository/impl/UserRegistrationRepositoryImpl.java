@@ -21,7 +21,7 @@ public class UserRegistrationRepositoryImpl implements UserRegistrationRepositor
         try {
             connection = DBConnection.getInstance().getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("Insert into user(userId,name,email,password,role) values(?,?,?,?,?)");
-            preparedStatement.setObject(1, user.getUserId());
+            preparedStatement.setObject(1,user.getUserId());
             preparedStatement.setObject(2, user.getName());
             preparedStatement.setObject(3, user.getEmail());
             preparedStatement.setObject(4, hashedPw);
@@ -38,8 +38,6 @@ public class UserRegistrationRepositoryImpl implements UserRegistrationRepositor
     public String getNewId(String rolePrefix) {
 
         String prefix = rolePrefix.substring(0, 1).toUpperCase();
-
-
         try {
             connection=DBConnection.getInstance().getConnection();
            PreparedStatement preparedStatement = connection.prepareStatement("Select * from user where userId like ? Order by userId desc limit 1");
@@ -58,4 +56,47 @@ public class UserRegistrationRepositoryImpl implements UserRegistrationRepositor
         }
 
     }
+
+    @Override
+    public ResultSet searchUser(String emailUser) {
+
+        try {
+            Connection connection1=DBConnection.getInstance().getConnection();
+            PreparedStatement preparedStatement = connection1.prepareStatement("Select * from user where email=?");
+            preparedStatement.setObject(1,emailUser);
+            return preparedStatement.executeQuery();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @Override
+    public void deleteUserByEmail(String userEmail) {
+
+        try {
+            Connection connection1=DBConnection.getInstance().getConnection();
+            PreparedStatement preparedStatement = connection1.prepareStatement("delete from user where email=?");
+            preparedStatement.setObject(1,userEmail);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @Override
+    public void updateUserPassword(String email, String hashPassword) {
+        try {
+            Connection connection1=DBConnection.getInstance().getConnection();
+            PreparedStatement preparedStatement = connection1.prepareStatement("Update user set password=? where email=? ");
+            preparedStatement.setObject(1,hashPassword);
+            preparedStatement.setObject(2,email);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

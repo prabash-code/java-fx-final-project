@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RegisterPageController implements Initializable {
+public class UserRegisterController implements Initializable {
 
 
     @FXML
@@ -38,34 +38,22 @@ public class RegisterPageController implements Initializable {
     @FXML
     private TextField txtUserName;
 
-   UserRegistrationService userRegistrationService=new UserRegistrationServiceImpl();
+    UserRegistrationService userRegistrationService = new UserRegistrationServiceImpl();
 
-    private int adminCount=0;
-    private int customerCount=0;
-    private int staffCount=0;
+    private int adminCount = 0;
+    private int customerCount = 0;
+    private int staffCount = 0;
 
     @FXML
     void btnUserLoginOnAction(ActionEvent event) {
-        Stage userLoginStage =new Stage();
+        Stage userLoginStage = new Stage();
 
-        userRegistrationService.RegisterNewUser(new User(getNewId(),
-                txtUserName.getText(),
-                txtEmail.getText(),
-                txtPassword.getText(),
-                cmbRole.getValue()
-        ));
-
-//        try {
-//         userLoginStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserLoginForm.fxml"))));
-//           userLoginStage.show();
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
+        userRegistrationService.RegisterNewUser(new User(getNewId(), txtUserName.getText(), txtEmail.getText(), txtPassword.getText(), cmbRole.getValue()));
     }
 
     @FXML
     void btnBackOnAction(ActionEvent event) {
-        Stage log =new Stage();
+        Stage log = new Stage();
         try {
             log.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/UserLoginForm.fxml"))));
             log.show();
@@ -76,19 +64,14 @@ public class RegisterPageController implements Initializable {
     }
 
 
-
     private String getNewId() {
-        String role=cmbRole.getValue();
-        return userRegistrationService.generateNewUserId(role.substring(0,1));
+        String role = cmbRole.getValue();
+        return userRegistrationService.generateNewUserId(role.substring(0, 1));
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<String> userType= FXCollections.observableArrayList(
-                "Admin",
-                    "Staff",
-                    "Customer"
-        );
+        ObservableList<String> userType = FXCollections.observableArrayList("Admin", "Staff");
 
         cmbRole.setItems(userType);
 
