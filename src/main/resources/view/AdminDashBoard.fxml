@@ -13,43 +13,53 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.AdminDashBoardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.AdminDashBoardController">
    <children>
-      <ImageView fitHeight="399.0" fitWidth="715.0" layoutX="-5.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="352.0" fitWidth="555.0" layoutX="150.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="432.0" fitWidth="755.0" layoutX="-5.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/comDashboard.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnDashboard" layoutX="37.0" layoutY="57.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="111.0" text="Button" />
-      <Button fx:id="btnMedicine" layoutX="37.0" layoutY="92.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="111.0" text="Button" />
-      <Button fx:id="btnSupplies" layoutX="37.0" layoutY="126.0" mnemonicParsing="false" onAction="#bntSupplyOnAction" opacity="0.0" prefHeight="26.0" prefWidth="111.0" text="Button" />
-      <Button fx:id="btnSales" layoutX="37.0" layoutY="152.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="111.0" text="Button" />
-      <Button fx:id="btnSalesHistory" layoutX="37.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="111.0" text="Button" />
-      <Button fx:id="btnReports" layoutX="37.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="111.0" text="Button" />
-      <Button fx:id="btnNotification" layoutX="37.0" layoutY="253.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="111.0" text="Button" />
-      <Button fx:id="btnSetting" layoutX="37.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnSettingOnAction" opacity="0.0" prefHeight="26.0" prefWidth="111.0" text="Button" />
-      <Button fx:id="btnLogout" layoutX="-2.0" layoutY="341.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
-      <Separator layoutX="175.0" layoutY="253.0" prefHeight="2.0" prefWidth="499.0" />
-      <TableView fx:id="tblAdminIssue" layoutX="166.0" layoutY="266.0" prefHeight="114.0" prefWidth="525.0" style="-fx-background-color: D1D3D4;">
+      <Button fx:id="btnDashboard" layoutX="9.0" layoutY="61.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnMedicine" layoutX="4.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="156.0" text="Button" />
+      <Button fx:id="btnSupplies" layoutX="9.0" layoutY="132.0" mnemonicParsing="false" onAction="#bntSupplyOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnSales" layoutX="4.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="156.0" text="Button" />
+      <Button fx:id="btnSalesHistory" layoutX="7.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnReports" layoutX="4.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="156.0" text="Button" />
+      <Button fx:id="btnNotification" layoutX="9.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnSetting" layoutX="9.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnSettingOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btnLogout" layoutX="9.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
+      <Separator layoutX="169.0" layoutY="266.0" prefHeight="4.0" prefWidth="569.0" />
+      <TableView fx:id="tblAdminIssue" layoutX="190.0" layoutY="284.0" prefHeight="114.0" prefWidth="525.0" style="-fx-background-color: D1D3D4;">
         <columns>
           <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
-          <TableColumn fx:id="colBrand" prefWidth="120.0" text="Brand" />
             <TableColumn fx:id="colName" prefWidth="115.0" text="Name" />
             <TableColumn fx:id="colIssue" prefWidth="214.0" text="Issue" />
+          <TableColumn fx:id="colBrand" prefWidth="120.0" text="Brand" />
         </columns>
       </TableView>
-      <Label fx:id="lblUser" layoutX="637.0" layoutY="14.0" prefHeight="18.0" prefWidth="47.0" text="User" />
-      <BarChart fx:id="chartAdminSalesDetails" barGap="5.0" categoryGap="15.0" layoutX="174.0" layoutY="47.0" prefHeight="199.0" prefWidth="500.0" title="Meicine QTY">
+      <Label fx:id="lblUser" layoutX="675.0" layoutY="14.0" prefHeight="18.0" prefWidth="47.0" text="Admin" textFill="#1ea136">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <BarChart fx:id="chartAdminSalesDetails" alternativeColumnFillVisible="true" barGap="3.0" layoutX="190.0" layoutY="74.0" prefHeight="182.0" prefWidth="500.0" title="Medicine QTY">
         <xAxis>
-          <CategoryAxis endMargin="3.0" label="Category" side="BOTTOM" startMargin="0.0" tickLabelFill="#2c1313" tickLength="1.0">
+          <CategoryAxis endMargin="3.0" label="Category" side="BOTTOM" startMargin="0.0" tickLabelFill="#903434" tickLength="1.0">
                <tickLabelFont>
                   <Font name="System Bold" size="8.0" />
                </tickLabelFont>
             </CategoryAxis>
         </xAxis>
         <yAxis>
-          <NumberAxis label="Available Count" minorTickCount="1" side="LEFT" tickLabelFill="#e38456" tickLabelGap="4.0" tickLength="1.0" upperBound="2000.0" />
+          <NumberAxis label="Available Count" minorTickCount="1" side="LEFT" tickLabelFill="#37bc4f" tickLabelGap="8.0" tickLength="1.0" upperBound="1500.0" />
         </yAxis>
       </BarChart>
+      <Separator layoutX="169.0" layoutY="68.0" prefHeight="4.0" prefWidth="569.0" />
+      <Label layoutX="169.0" layoutY="47.0" text="Admin Dashboard" textFill="#6c6464">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

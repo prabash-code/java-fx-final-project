@@ -24,7 +24,21 @@
       <Button fx:id="btnReports" layoutX="14.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="169.0" text="Button" />
       <Button fx:id="btnNotification" layoutX="14.0" layoutY="311.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="169.0" text="Button" />
       <Button fx:id="btnLogout" layoutX="14.0" layoutY="366.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="138.0" text="Button" />
-      <TableView fx:id="tblAvailability" layoutX="304.0" layoutY="98.0" prefHeight="73.0" prefWidth="429.0">
+      <Button fx:id="btnSales" layoutX="9.0" layoutY="193.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="25.0" prefWidth="169.0" text="Button" />
+      <Button fx:id="btnLogout" layoutX="4.0" layoutY="417.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="25.0" prefWidth="183.0" text="Button" />
+      <ImageView fitHeight="425.0" fitWidth="671.0" layoutX="190.0" layoutY="56.0" opacity="0.3" pickOnBounds="true">
+         <image>
+            <Image url="@../img/medicine-admin.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblHistory" layoutX="199.0" layoutY="210.0" opacity="0.85" prefHeight="160.0" prefWidth="226.0">
+        <columns>
+          <TableColumn fx:id="colSalesSaleId" prefWidth="75.0" text="Sale Id" />
+          <TableColumn fx:id="colSalesDate" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="colSalesTotal" prefWidth="75.0" text="Total" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblAvailability" layoutX="304.0" layoutY="98.0" opacity="0.86" prefHeight="73.0" prefWidth="429.0">
         <columns>
           <TableColumn fx:id="colSearchName" prefWidth="91.0" text="Name" />
           <TableColumn fx:id="colSearchSupplier" prefWidth="90.0" text="Supplier" />
@@ -33,21 +47,7 @@
             <TableColumn fx:id="colSearchExpiryDate" prefWidth="75.20001220703125" text="Expiry Date" />
         </columns>
       </TableView>
-      <Button fx:id="btnSearch" layoutX="709.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="Search" />
-      <TextField fx:id="txtSearch" layoutX="550.0" layoutY="63.0" />
-      <TableView fx:id="tblHistory" layoutX="199.0" layoutY="210.0" prefHeight="160.0" prefWidth="226.0">
-        <columns>
-          <TableColumn fx:id="colSalesSaleId" prefWidth="75.0" text="Sale Id" />
-          <TableColumn fx:id="colSalesDate" prefWidth="75.0" text="Date" />
-            <TableColumn fx:id="colSalesTotal" prefWidth="75.0" text="Total" />
-        </columns>
-      </TableView>
-      <Label layoutX="202.0" layoutY="188.0" text="Sales History">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Label>
-      <TableView fx:id="tblNotification" layoutX="457.0" layoutY="210.0" prefHeight="160.0" prefWidth="397.0">
+      <TableView fx:id="tblNotification" layoutX="457.0" layoutY="210.0" opacity="0.86" prefHeight="160.0" prefWidth="397.0">
         <columns>
           <TableColumn fx:id="colNotificationName" prefWidth="75.0" text="Name" />
           <TableColumn fx:id="colNotificationSupplierId" prefWidth="134.0" text="SupplierId" />
@@ -55,11 +55,16 @@
             <TableColumn fx:id="colNotificationDate" text="Date" />
         </columns>
       </TableView>
-      <Label layoutX="484.0" layoutY="188.0" text="Notification">
+      <TextField fx:id="txtSearch" layoutX="611.0" layoutY="63.0" />
+      <Button fx:id="btnSearch" layoutX="774.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="Search" />
+      <Label layoutX="207.0" layoutY="188.0" text="Sales History">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="457.0" layoutY="188.0" text="Notification" textFill="#171616">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Button fx:id="btnSales" layoutX="9.0" layoutY="193.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="25.0" prefWidth="169.0" text="Button" />
-      <Button fx:id="btnLogout" layoutX="4.0" layoutY="417.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="25.0" prefWidth="183.0" text="Button" />
    </children>
 </AnchorPane>

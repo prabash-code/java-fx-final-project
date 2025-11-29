@@ -3,34 +3,56 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SettingsController">
+<AnchorPane prefHeight="441.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SettingsController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="556.0" fitWidth="980.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="472.0" fitWidth="824.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/comDashboard.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblUser" layoutX="886.0" layoutY="25.0" text="User" />
-      <Button fx:id="btnDashboard" layoutX="14.0" layoutY="83.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="186.0" text="Button" />
-      <Button fx:id="btnMedicine" layoutX="11.0" layoutY="132.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="186.0" text="Button" />
-      <Button fx:id="btnSuppliers" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnSuppliersOnAction" opacity="0.0" prefHeight="26.0" prefWidth="186.0" text="Button" />
-      <Button fx:id="btnSales" layoutX="22.0" layoutY="222.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="177.0" text="Button" />
-      <Button fx:id="btnSalesHistory" layoutX="22.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="178.0" text="Button" />
-      <Button fx:id="btnReports" layoutX="14.0" layoutY="312.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="186.0" text="Button" />
-      <Button fx:id="btnNotifications" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnNotificationsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="186.0" text="Button" />
-      <Button fx:id="btnSettings" layoutX="14.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="186.0" text="Button" />
-      <Button fx:id="btnlogout" layoutX="7.0" layoutY="479.0" mnemonicParsing="false" onAction="#btnlogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="201.0" text="Button" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="234.0" layoutY="83.0" prefHeight="18.0" prefWidth="726.0" text="Add Supplier" textAlignment="JUSTIFY" textFill="#12a95b">
+      <Label fx:id="lblUser" layoutX="741.0" layoutY="21.0" text="User" textFill="#248133">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnDashboard" layoutX="6.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
+      <Button fx:id="btnMedicine" layoutX="6.0" layoutY="107.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
+      <Button fx:id="btnSuppliers" layoutX="6.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnSuppliersOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
+      <Button fx:id="btnSales" layoutX="-1.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="177.0" text="Button" />
+      <Button fx:id="btnSalesHistory" layoutX="2.0" layoutY="218.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
+      <Button fx:id="btnReports" layoutX="10.0" layoutY="258.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
+      <Button fx:id="btnNotifications" layoutX="6.0" layoutY="299.0" mnemonicParsing="false" onAction="#btnNotificationsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
+      <Button fx:id="btnSettings" layoutX="10.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
+      <Button fx:id="btnlogout" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnlogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
+      <ImageView fitHeight="409.0" fitWidth="641.0" layoutX="183.0" layoutY="55.0" opacity="0.73" pickOnBounds="true">
+         <image>
+            <Image url="@../img/medicine-admin.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="74.0" prefHeight="22.0" prefWidth="178.0" text=" Remove Staff Member" textAlignment="JUSTIFY" textFill="#e5efea">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Separator layoutX="222.0" layoutY="107.0" prefHeight="1.0" prefWidth="743.0" />
+      <Separator layoutX="200.0" layoutY="96.0" prefHeight="2.0" prefWidth="600.0" />
+      <TableView fx:id="tblStaff" layoutX="282.0" layoutY="118.0" opacity="0.88" prefHeight="200.0" prefWidth="445.0">
+        <columns>
+          <TableColumn fx:id="colStaffId" prefWidth="75.0" text="Staff ID" />
+          <TableColumn fx:id="colName" prefWidth="144.00006103515625" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="224.80001220703127" text="Email" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtEmail" alignment="CENTER" layoutX="560.0" layoutY="399.0" promptText="Email" />
+      <TextField fx:id="txtId" alignment="CENTER" layoutX="227.0" layoutY="401.0" promptText="Staff Id" />
+      <TextField fx:id="txtName" alignment="CENTER" layoutX="394.0" layoutY="399.0" promptText="Name" />
+      <Button fx:id="btnDelete" layoutX="728.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="22.0" prefWidth="80.0" styleClass="btn-delete-settings" stylesheets="@../css/style.css" text="Delete" />
    </children>
 </AnchorPane>
