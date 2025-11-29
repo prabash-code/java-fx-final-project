@@ -37,6 +37,7 @@ public class HomePageController {
         Stage contactUs= new Stage();
         try {
             contactUs.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ContactUs.fxml"))));
+            contactUs.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -136,7 +136,7 @@ public class AdminDashBoardController implements Initializable {
     }
 
     @FXML
-    void btnReportsOnAction(ActionEvent event) {
+    public void btnReportsOnAction(ActionEvent event) {
         Stage reports = new Stage();
         try {
             reports.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Reports.fxml"))));
