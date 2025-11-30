@@ -14,4 +14,6 @@ public interface SupplierRepository {
     void deleteSupplier(String mail);
 
     void updateSupplierDetails(Supplier supplier);
+
+    public ResultSet searchSupplierByname(String text);
 }

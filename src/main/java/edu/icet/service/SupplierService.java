@@ -15,4 +15,5 @@ public interface SupplierService {
     String generateSupplierId();
 
 
+    Supplier searchSupplier(String text);
 }

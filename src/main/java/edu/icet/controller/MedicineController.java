@@ -226,6 +226,7 @@ public class MedicineController implements Initializable {
             throw new RuntimeException(e);
         }
 
+
     }
 
     @FXML

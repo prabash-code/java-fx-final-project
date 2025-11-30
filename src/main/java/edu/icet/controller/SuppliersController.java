@@ -4,6 +4,8 @@ package edu.icet.controller;
 import edu.icet.model.dto.Supplier;
 import edu.icet.service.impl.SupplierServiceImpl;
 import edu.icet.service.SupplierService;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +22,9 @@ public class SuppliersController implements Initializable {
     SupplierService supplierService=new SupplierServiceImpl();
     @FXML
     private Button btnAdd;
+
+    @FXML
+    private TextField txtSearch;
 
     @FXML
     private Button btnClear;
@@ -267,5 +272,26 @@ public class SuppliersController implements Initializable {
     }
     public void loadTable(){
         supplierTable.setItems(supplierService.getAll());
+    }
+
+    public void btnSearchOnAction(ActionEvent actionEvent) {
+
+        Supplier supplier = supplierService.searchSupplier(txtSearch.getText());
+        ObservableList<Supplier>list= FXCollections.observableArrayList();
+
+        if (supplier == null) {
+            new Alert(Alert.AlertType.ERROR, "No Such Supplier found!").show();
+            return;
+        }
+
+        list.add(new Supplier(supplier.getSupplierId(),
+                supplier.getName(),
+                supplier.getCompany(),
+                supplier.getEmail(),
+                supplier.getPhone()
+                ));
+
+        supplierTable.setItems(list);
+
     }
 }

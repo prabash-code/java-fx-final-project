@@ -1,5 +1,6 @@
 package edu.icet.service.impl;
 
+import edu.icet.model.dto.Medicine;
 import edu.icet.model.dto.Supplier;
 import edu.icet.repository.impl.SupplierRepositoryImpl;
 import edu.icet.repository.SupplierRepository;
@@ -75,6 +76,30 @@ public class SupplierServiceImpl implements SupplierService {
                 return null;
             }
         } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public Supplier searchSupplier(String text) {
+
+        try {
+            ResultSet resultSet = supplierRepository.searchSupplierByname(text);
+
+            if (resultSet.next()) {
+                return new Supplier(
+                        resultSet.getString("supplier_id"),
+                        resultSet.getString("name"),
+                        resultSet.getString("company"),
+                        resultSet.getString("email"),
+                        resultSet.getString("contact_number"));
+
+
+            } else {
+                return null;
+            }
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, "This is not at database").show();
             throw new RuntimeException(e);
         }
     }

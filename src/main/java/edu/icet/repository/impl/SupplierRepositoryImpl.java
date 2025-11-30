@@ -80,4 +80,17 @@ public class SupplierRepositoryImpl implements SupplierRepository {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public ResultSet searchSupplierByname(String text) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("Select * from suppliers where company=?");
+            preparedStatement.setObject(1, text);
+            return preparedStatement.executeQuery();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }
