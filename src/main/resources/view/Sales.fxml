@@ -12,23 +12,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="529.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SalesController">
+<AnchorPane prefHeight="622.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SalesController">
    <children>
-      <ImageView fitHeight="540.0" fitWidth="974.0" layoutX="-11.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="632.0" fitWidth="1118.0" layoutX="-11.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/comDashboard.png" />
          </image>
       </ImageView>
-      <ImageView blendMode="DARKEN" fitHeight="475.0" fitWidth="748.0" layoutX="203.0" layoutY="64.0" opacity="0.25" pickOnBounds="true" smooth="false">
-         <image>
-            <Image url="@../img/medicine-admin.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="863.0" layoutY="26.0" text="User" textFill="#167546">
+      <Label layoutX="1008.0" layoutY="31.0" text="User" textFill="#167546">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <TableView fx:id="tblSales" layoutX="208.0" layoutY="104.0" prefHeight="275.0" prefWidth="468.0">
+      <TableView fx:id="tblSales" layoutX="248.0" layoutY="101.0" prefHeight="182.0" prefWidth="468.0">
         <columns>
           <TableColumn fx:id="colItemId" prefWidth="80.00007629394531" text="ItemId" />
           <TableColumn fx:id="colName" prefWidth="124.79998779296875" text="Name" />
@@ -38,78 +33,74 @@
             <TableColumn fx:id="colDate" prefWidth="71.20001220703125" text="Date" />
         </columns>
       </TableView>
-      <TextField fx:id="txtItemId" layoutX="755.0" layoutY="216.0" onAction="#txtItemCodeOnAction" />
-      <Label layoutX="688.0" layoutY="221.0" text="Item Id :">
+      <TextField fx:id="txtItemId" layoutX="870.0" layoutY="217.0" onAction="#txtItemCodeOnAction" />
+      <Label layoutX="744.0" layoutY="221.0" text="Item Id :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="686.0" layoutY="251.0" text="Name :">
+      <Label layoutX="744.0" layoutY="251.0" text="Name :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblNameOfMedicine" layoutX="758.0" layoutY="251.0" text="Name Of Medicine">
+      <Label fx:id="lblNameOfMedicine" layoutX="872.0" layoutY="251.0" text="Name Of Medicine">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Label layoutX="685.0" layoutY="289.0" text="Quantity :">
+      <Label layoutX="743.0" layoutY="289.0" text="Quantity :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="685.0" layoutY="327.0" text="Unit Price :">
+      <Label layoutX="746.0" layoutY="325.0" text="Unit Price :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="682.0" layoutY="361.0" text="Date :">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font></Label>
-      <Label layoutX="731.0" layoutY="444.0" text="Net Total :" textAlignment="RIGHT" textFill="#cf2d2d">
+      <Label layoutX="809.0" layoutY="470.0" text="Net Total :" textAlignment="RIGHT" textFill="#cf2d2d">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblNetTotal" layoutX="815.0" layoutY="448.0" text="00.00" textFill="#da1414">
+      <Label fx:id="lblNetTotal" layoutX="910.0" layoutY="474.0" text="00.00" textFill="#da1414">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <TextField fx:id="txtQuantity" layoutX="755.0" layoutY="285.0" />
-      <DatePicker fx:id="txtDate" layoutX="754.0" layoutY="356.0" prefHeight="26.0" prefWidth="150.0" />
-      <Label fx:id="lblPrice" layoutX="755.0" layoutY="327.0" text="Price">
+      <TextField fx:id="txtQuantity" layoutX="870.0" layoutY="277.0" />
+      <DatePicker fx:id="txtDate" layoutX="872.0" layoutY="348.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label fx:id="lblPrice" layoutX="874.0" layoutY="317.0" text="Price">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Button fx:id="btnAddToCart" layoutX="758.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnAddToCartOnAction" prefHeight="21.0" prefWidth="80.0" styleClass="btnAddToCart" stylesheets="@../css/style.css" text="Add to Cart" />
-      <Separator layoutX="681.0" layoutY="445.0" prefHeight="3.0" prefWidth="264.0" />
-      <Button fx:id="btnPlaceOrder" layoutX="758.0" layoutY="492.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefHeight="21.0" prefWidth="80.0" styleClass="btnPlaceOrder" stylesheets="@../css/style.css" text="Place Order" />
-      <Separator layoutX="681.0" layoutY="199.0" prefHeight="3.0" prefWidth="264.0" />
-      <Label layoutX="688.0" layoutY="104.0" text="Order Id :" textFill="#141313">
+      <Button fx:id="btnAddToCart" layoutX="982.0" layoutY="414.0" mnemonicParsing="false" onAction="#btnAddToCartOnAction" prefHeight="21.0" prefWidth="80.0" styleClass="btnAddToCart" stylesheets="@../css/style.css" text="Add to Cart" />
+      <Separator layoutX="661.0" layoutY="445.0" prefHeight="3.0" prefWidth="376.0" />
+      <Button fx:id="btnPlaceOrder" layoutX="849.0" layoutY="530.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefHeight="21.0" prefWidth="80.0" styleClass="btnPlaceOrder" stylesheets="@../css/style.css" text="Place Order" />
+      <Separator layoutX="739.0" layoutY="199.0" prefHeight="3.0" prefWidth="297.0" />
+      <Label layoutX="744.0" layoutY="104.0" text="Order Id :" textFill="#141313">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Label layoutX="687.0" layoutY="130.0" text="Customer Name :">
+      <Label layoutX="744.0" layoutY="130.0" text="Customer Name :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Label layoutX="686.0" layoutY="162.0" text="Customer Email :">
+      <Label layoutX="746.0" layoutY="162.0" text="Customer Email :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <TextField fx:id="txtCustomername" layoutX="789.0" layoutY="126.0" />
-      <TextField fx:id="txtCustomerEmail" layoutX="789.0" layoutY="159.0" />
-      <Label fx:id="lblId" layoutX="791.0" layoutY="104.0" text="Id">
+      <TextField fx:id="txtCustomername" layoutX="870.0" layoutY="127.0" />
+      <TextField fx:id="txtCustomerEmail" layoutX="872.0" layoutY="159.0" />
+      <Label fx:id="lblId" layoutX="870.0" layoutY="101.0" text="Id">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Label layoutX="763.0" layoutY="67.0" prefHeight="26.0" prefWidth="100.0" text="Order Details" textFill="#1e1c1c" wrapText="true">
+      <Label layoutX="909.0" layoutY="70.0" prefHeight="26.0" prefWidth="100.0" text="Order Details" textFill="#157234" wrapText="true">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Separator layoutX="682.0" layoutY="94.0" prefHeight="3.0" prefWidth="264.0" />
+      <Separator layoutX="735.0" layoutY="94.0" prefHeight="3.0" prefWidth="304.0" />
       <Button fx:id="btnDashbar" layoutX="5.0" layoutY="83.0" mnemonicParsing="false" onAction="#btnDashbarOnAction" opacity="0.0" prefHeight="26.0" prefWidth="190.0" text="Button" />
       <Button fx:id="btnMedicine" layoutX="5.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="190.0" text="Button" />
       <Button fx:id="btnSupplier" layoutX="5.0" layoutY="171.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" opacity="0.0" prefHeight="26.0" prefWidth="190.0" text="Button" />
@@ -119,5 +110,45 @@
       <Button fx:id="btnNotification" layoutX="12.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="183.0" text="Button" />
       <Button fx:id="btnSettings" layoutX="5.0" layoutY="398.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="190.0" text="Button" />
       <Button fx:id="btnLogout" layoutX="13.0" layoutY="469.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="174.0" text="Button" />
+      <Button fx:id="btnExportPDF" layoutX="348.0" layoutY="563.0" mnemonicParsing="false" onAction="#btnExportPDFOnAction" prefHeight="26.0" prefWidth="114.0" styleClass="btn-export-pdf" stylesheets="@../css/style.css" text="Export PDF">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="745.0" layoutY="358.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="253.0" fitWidth="390.0" layoutX="248.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/img.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="390.0" layoutY="358.0" opacity="0.37" text="date">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustName" layoutX="391.0" layoutY="389.0" opacity="0.37" text="Customer Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="390.0" layoutY="415.0" opacity="0.38" text="Total">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="267.0" layoutY="340.0" text="Sale Id :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInvoiceId" layoutX="389.0" layoutY="340.0" opacity="0.37" text="sale id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

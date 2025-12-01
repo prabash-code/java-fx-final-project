@@ -49,4 +49,16 @@ public class SalesRepositoryImpl implements SalesRepository {
         }
     }
 
+    @Override
+    public ResultSet generatePdf(String text) {
+        Connection connection1=DBConnection.getInstance().getConnection();
+        try {
+            PreparedStatement preparedStatement = connection1.prepareStatement("select * from sales left join salesdetails on sales.saleId=salesdetails.saleId where sales.saleId=?;");
+           preparedStatement.setObject(1,text);
+            return preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

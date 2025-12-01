@@ -1,6 +1,7 @@
 package edu.icet.controller;
 
 import edu.icet.model.dto.CartItem;
+import edu.icet.model.dto.Invoice;
 import edu.icet.model.dto.Medicine;
 import edu.icet.model.dto.Sale;
 import edu.icet.service.SalesService;
@@ -57,6 +58,12 @@ public class SalesController implements Initializable {
     @FXML
     private Button btnSupplier;
 
+    @FXML
+    private Button btnPrintInvoice;
+
+    @FXML
+    private Button btnExportPDF;
+
 
     @FXML
     private TableColumn<?, ?> colDate;
@@ -91,6 +98,10 @@ public class SalesController implements Initializable {
     @FXML
     private TextField txtCustomerEmail;
 
+
+    @FXML
+    private Label lblInvoiceId;
+
     @FXML
     private TextField txtCustomername;
 
@@ -102,9 +113,18 @@ public class SalesController implements Initializable {
 
     @FXML
     private TextField txtQuantity;
+    @FXML
+    private Label lblCustName;
+
+    @FXML
+    private Label lblDate;
+
+    @FXML
+    private Label lblTotal;
 
     @FXML
     private TableView<CartItem> tblSales;
+
 
     SalesService salesService = new SalesServiceImpl();
     ObservableList<CartItem> list = FXCollections.observableArrayList();
@@ -205,14 +225,23 @@ public class SalesController implements Initializable {
                 Double.parseDouble(lblNetTotal.getText())
         ),list);
 
-        Stage sales=new Stage();
-        try {
-            sales.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Sales.fxml"))));
-            sales.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+
+        ObservableList<Invoice> invoices = salesService.generatePdf(lblId.getText());
+
+        String name="";
+        double total=0.00;
+
+        for(Invoice invoice:invoices){
+            name=invoice.getCustomerName();
+            total= Double.parseDouble(invoice.getTotal());
         }
+        lblInvoiceId.setText(lblId.getText());
+        lblDate.setText(String.valueOf(LocalDate.now()));
+        lblCustName.setText(name);
+        lblTotal.setText(String.valueOf(total));
+
     }
+
 
     @FXML
     void txtItemCodeOnAction(ActionEvent event) throws SQLException {
@@ -296,5 +325,10 @@ public class SalesController implements Initializable {
         colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
         lblId.setText(generateOrderId());
+    }
+
+    public void btnExportPDFOnAction(ActionEvent actionEvent) {
+
+        salesService.generateInvoicePDF(salesService.generatePdf(lblId.getText()));
     }
 }

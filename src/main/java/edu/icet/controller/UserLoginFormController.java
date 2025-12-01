@@ -23,7 +23,7 @@ public class UserLoginFormController {
     @FXML
     private TextField txtEmailBtn;
     @FXML
-    private PasswordField txtPasswordBtn;
+    private PasswordField PasswordBtn;
     @FXML
     private Button btnRegister;
     @FXML
@@ -59,18 +59,20 @@ public class UserLoginFormController {
     @FXML
     void checkBoxOnAction(ActionEvent event) {
 
-        txtPasswordBtn.setManaged(!checkBox.isSelected());
-        txtPasswordField.setManaged(checkBox.isSelected());
+        PasswordBtn.setVisible(true);
+        PasswordBtn.setManaged(true);
+        txtPasswordField.setManaged(false);
         txtPasswordField.setVisible(false);
 
+
         if (checkBox.isSelected()) {
-            txtPasswordField.setText(txtPasswordBtn.getText());
+            txtPasswordField.setText(PasswordBtn.getText());
             txtPasswordField.setVisible(true);
-            txtPasswordBtn.setVisible(false);
+            PasswordBtn.setVisible(false);
         }else{
-            txtPasswordBtn.setText(txtPasswordField.getText());
+            PasswordBtn.setText(txtPasswordField.getText());
             txtPasswordField.setVisible(false);
-            txtPasswordBtn.setVisible(true);
+            PasswordBtn.setVisible(true);
 
         }
     }
@@ -78,7 +80,7 @@ public class UserLoginFormController {
     @FXML
     void loginOnAction(ActionEvent event) {
         String email = txtEmailBtn.getText();
-        String password = txtPasswordBtn.getText();
+        String password =PasswordBtn.getText();
 
         // 1. Get stored hash
         String hashCode = userLoginService.checkPassword(email);

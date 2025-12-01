@@ -263,7 +263,28 @@
                     -fx-font-size: 10px;
                     -fx-font-weight: bold;
 
+ }.btn-print-invoice{
+                        -fx-background-color:#31694E;
+                        -fx-text-fill:White;
+                        -fx-background-radius: 6;
+                        -fx-font-size: 10px;
+                        -fx-font-weight: bold;
+
+
+ }.btn-export-pdf{
+                         -fx-background-color:#31694E;
+                         -fx-text-fill:White;
+                         -fx-background-radius: 6;
+                         -fx-font-size: 10px;
+                         -fx-font-weight: bold;
+
+
+ }.invoice{
+ -fx-background-color:#A8BBA3;
+   -fx-background-radius: 6;
  }
+
+
 
 
 }

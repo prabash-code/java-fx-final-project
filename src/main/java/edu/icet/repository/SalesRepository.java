@@ -11,4 +11,6 @@ public interface SalesRepository {
     void addSales(Connection connection, Sale sale);
 
     ResultSet getAllSaleDetails();
+
+    ResultSet generatePdf(String text);
 }

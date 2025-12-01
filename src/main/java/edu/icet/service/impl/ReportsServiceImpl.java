@@ -116,7 +116,7 @@ public class ReportsServiceImpl implements ReportsService {
             if (!folder.exists()) {
                 folder.mkdirs();
             }
-            ;
+
             String output = path + "/suppliers_report.pdf";
 
             Document doc = new Document();

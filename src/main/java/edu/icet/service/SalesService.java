@@ -1,6 +1,7 @@
 package edu.icet.service;
 
 import edu.icet.model.dto.CartItem;
+import edu.icet.model.dto.Invoice;
 import edu.icet.model.dto.Medicine;
 import edu.icet.model.dto.Sale;
 import javafx.collections.ObservableList;
@@ -16,4 +17,8 @@ public interface SalesService {
     Medicine SerchMedicine(String medicineName) throws SQLException;
 
     ObservableList<Sale> getAll();
+
+    ObservableList<Invoice> generatePdf(String text);
+
+    void generateInvoicePDF(ObservableList<Invoice> invoices);
 }

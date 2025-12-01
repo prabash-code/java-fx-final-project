@@ -24,7 +24,7 @@
             <Font size="15.0" />
          </font></Button>
       <TextField fx:id="txtEmailBtn" alignment="CENTER" layoutX="50.0" layoutY="141.0" prefHeight="26.0" prefWidth="198.0" promptText="Email" />
-      <PasswordField fx:id="txtPasswordBtn" alignment="CENTER" layoutX="47.0" layoutY="188.0" prefHeight="26.0" prefWidth="198.0" promptText="Password" />
+      <PasswordField fx:id="PasswordBtn" alignment="CENTER" layoutX="47.0" layoutY="188.0" prefHeight="26.0" prefWidth="198.0" promptText="Password" />
       <ImageView fitHeight="67.0" fitWidth="79.0" layoutX="113.0" layoutY="28.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/add-user.png" />
