@@ -21,4 +21,15 @@ public class SalesHistoryRepositoryImpl implements SalesHistoryRepository {
 
     }
 
+    @Override
+    public ResultSet searchByCustomerName(String text) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("Select * from sales where customerName=?");
+            preparedStatement.setObject(1,text);
+            return preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

@@ -3,6 +3,7 @@ package edu.icet.controller;
 import edu.icet.model.dto.SalesHistory;
 import edu.icet.service.SalesHistoryService;
 import edu.icet.service.impl.SalesHistoryServiceImpl;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -64,6 +66,9 @@ public class SalesHistoryController implements Initializable {
 
     @FXML
     private TableColumn<?, ?> colTotal;
+
+    @FXML
+    private TextField txtSearch;
 
     @FXML
     private TableView<SalesHistory> tblSalesHistory;
@@ -184,7 +189,13 @@ public class SalesHistoryController implements Initializable {
         colCustomerName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
 
         tblSalesHistory.setItems(salesHistoryService.getAll());
+    }
+
+    public void btnNameSearchOnAction(ActionEvent actionEvent) {
+        ObservableList<SalesHistory> salesHistories = salesHistoryService.searchHistoryByCustomerName(txtSearch.getText());
+        tblSalesHistory.setItems(salesHistories);
     }
 }

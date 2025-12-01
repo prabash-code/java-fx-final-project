@@ -82,7 +82,7 @@
             <Image url="@../img/clean.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtSearch" alignment="CENTER" layoutX="589.0" layoutY="83.0" opacity="0.96" promptText="SupplierName" />
+      <TextField fx:id="txtSearch" alignment="CENTER" layoutX="589.0" layoutY="83.0" opacity="0.96" promptText="company" />
       <Button fx:id="btnSearch" layoutX="744.0" layoutY="85.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="21.0" prefWidth="56.0" styleClass="btnSearchSuppliers" stylesheets="@../css/style.css" text="Search" />
    </children>
 </AnchorPane>

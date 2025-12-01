@@ -5,4 +5,6 @@ import javafx.collections.ObservableList;
 
 public interface SalesHistoryService {
     public ObservableList<SalesHistory> getAll();
+
+    ObservableList<SalesHistory> searchHistoryByCustomerName(String text);
 }

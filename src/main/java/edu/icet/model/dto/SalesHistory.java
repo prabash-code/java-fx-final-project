@@ -17,5 +17,6 @@ public class SalesHistory {
     private String name;
     private LocalDate date;
     private String email;
+    private double total;
 
 }

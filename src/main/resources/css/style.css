@@ -242,6 +242,28 @@
 
 
  }
+ .txtBoxBrandName,.txtBoxMedicineName,.txtBoxCompanyName,.txtBoxQuantityName,.txtBoxExpireDateName,.txtBoxManufacDateName,.txtBoxUnitPrice{
+  -fx-background-color:#226f54;
+  -fx-text-fill: White;
+
+ }.txtNameSuppliers,.txtCompanySuppliers,.txtEmailSuppliers,.txtContactSuppliers{
+      -fx-background-color:#226f54;
+      -fx-text-fill: White;
+
+ }.btnSearchSuppliers{
+                -fx-background-color:00BFA6;
+                -fx-text-fill: #00BFA6;
+                -fx-background-radius: 6;
+                -fx-font-size: 10px;
+                -fx-font-weight: bold;
+ }.btnNameSearch{
+                    -fx-background-color:00BFA6;
+                    -fx-text-fill: #00BFA6;
+                    -fx-background-radius: 6;
+                    -fx-font-size: 10px;
+                    -fx-font-weight: bold;
+
+ }
 
 
 }

@@ -25,7 +25,8 @@ public class SalesHistoryServiceImpl implements SalesHistoryService {
                         allDetails.getString("saleId"),
                         allDetails.getString("customerName"),
                         allDetails.getDate("saleDate").toLocalDate(),
-                        allDetails.getString("customerEmail")
+                        allDetails.getString("customerEmail"),
+                        allDetails.getDouble("total")
 
                 ));
             }
@@ -34,4 +35,27 @@ public class SalesHistoryServiceImpl implements SalesHistoryService {
         }
         return list;
     }
+
+    @Override
+    public ObservableList<SalesHistory> searchHistoryByCustomerName(String text) {
+        ResultSet allDetails = salesHistoryRepository.searchByCustomerName(text);
+        ObservableList<SalesHistory>listOfCust=FXCollections.observableArrayList();
+
+        try {
+            while (allDetails.next()) {
+                listOfCust.add(new SalesHistory(
+                        allDetails.getString("saleId"),
+                        allDetails.getString("customerName"),
+                        allDetails.getDate("saleDate").toLocalDate(),
+                        allDetails.getString("customerEmail"),
+                        allDetails.getDouble("total")
+
+                ));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return listOfCust;
+    }
+
 }
