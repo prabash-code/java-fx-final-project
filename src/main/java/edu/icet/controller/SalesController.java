@@ -241,7 +241,7 @@ public class SalesController implements Initializable {
     void btnReportsOnAction(ActionEvent event) {
         Stage report = new Stage();
         try {
-            report.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Medicine.fxml"))));
+            report.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Reports.fxml"))));
             report.show();
         } catch (IOException e) {
             throw new RuntimeException(e);

@@ -71,7 +71,8 @@ public class ReportsServiceImpl implements ReportsService {
                         allDetails.getString("saleId"),
                         allDetails.getString("customerName"),
                         allDetails.getDate("saleDate").toLocalDate(),
-                        allDetails.getString("customerEmail")
+                        allDetails.getString("customerEmail"),
+                        allDetails.getDouble("total")
                 ));
 
             }
@@ -89,11 +90,7 @@ public class ReportsServiceImpl implements ReportsService {
         try {
             while (allDetails.next()) {
                 listSuppliers.add(new Supplier(
-                        allDetails.getString("supplier_id"),
-                        allDetails.getString("name"),
-                        allDetails.getString("company"),
-                        allDetails.getString("email"),
-                        allDetails.getString("contact_number")
+
                 ));
 
             }

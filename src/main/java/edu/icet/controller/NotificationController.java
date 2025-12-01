@@ -185,7 +185,7 @@ public class NotificationController implements Initializable {
     void btnSettingsOnAction(ActionEvent event) {
         Stage setting=new Stage();
         try {
-            setting.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Settings.fxml.fxml"))));
+            setting.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Settings.fxml"))));
             setting.show();
         } catch (IOException e) {
             throw new RuntimeException(e);

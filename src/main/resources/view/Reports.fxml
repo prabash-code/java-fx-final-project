@@ -16,14 +16,14 @@
          </image>
       </ImageView>
       <Button fx:id="btnDashboard" layoutX="14.0" layoutY="81.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="175.0" text="Button" />
-      <Button fx:id="btnMedicine" layoutX="14.0" layoutY="117.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="183.0" text="Button" />
+      <Button fx:id="btnMedicine" layoutX="7.0" layoutY="117.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="190.0" text="Button" />
       <Button fx:id="btnSuppliers" layoutX="14.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnSuppliersOnAction" opacity="0.0" prefHeight="26.0" prefWidth="175.0" text="Button" />
       <Button fx:id="btnSales" layoutX="14.0" layoutY="201.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="175.0" text="Button" />
-      <Button fx:id="btnSalesHistory" layoutX="57.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
-      <Button fx:id="btnReports" layoutX="14.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="175.0" text="Button" />
-      <Button fx:id="btnNotification" layoutX="14.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="175.0" text="Button" />
-      <Button fx:id="btnSetting" layoutX="14.0" layoutY="369.0" mnemonicParsing="false" onAction="#btnSettingOnAction" opacity="0.0" prefHeight="26.0" prefWidth="175.0" text="Button" />
-      <Button fx:id="btnLogout" layoutX="14.0" layoutY="443.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.03" prefHeight="26.0" prefWidth="183.0" text="Button" />
+      <Button fx:id="btnSalesHistory" layoutX="6.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="183.0" text="Button" />
+      <Button fx:id="btnReports" layoutX="14.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="183.0" text="Button" />
+      <Button fx:id="btnNotification" layoutX="6.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="183.0" text="Button" />
+      <Button fx:id="btnSetting" layoutX="6.0" layoutY="369.0" mnemonicParsing="false" onAction="#btnSettingOnAction" opacity="0.0" prefHeight="26.0" prefWidth="183.0" text="Button" />
+      <Button fx:id="btnLogout" layoutX="7.0" layoutY="443.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.03" prefHeight="26.0" prefWidth="190.0" text="Button" />
       <Label layoutX="814.0" layoutY="20.0" text="User" textFill="#1d7b59">
          <font>
             <Font name="System Bold" size="12.0" />
