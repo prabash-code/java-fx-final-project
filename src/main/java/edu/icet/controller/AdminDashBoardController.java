@@ -1,8 +1,14 @@
 package edu.icet.controller;
 
 import edu.icet.model.dto.Medicine;
+import edu.icet.model.dto.Notification;
+import edu.icet.model.dto.Sale;
 import edu.icet.service.MedicineService;
+import edu.icet.service.NotificationService;
+import edu.icet.service.SalesService;
 import edu.icet.service.impl.MedicineServiceImpl;
+import edu.icet.service.impl.NotificationServiceImpl;
+import edu.icet.service.impl.SalesServiceImpl;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -24,10 +30,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
 
 public class AdminDashBoardController implements Initializable {
-
+    SalesService salesService=new SalesServiceImpl();
+    NotificationService notificationService=new NotificationServiceImpl();
 
     @FXML
     private Button btnDashboard;
@@ -76,6 +84,18 @@ public class AdminDashBoardController implements Initializable {
 
     @FXML
     private BarChart<?, ?> chartAdminSalesDetails;
+
+    @FXML
+    private Label lblNotification;
+
+    @FXML
+    private Label lblTodayRevenue;
+
+    @FXML
+    private Label lblTotalMedicine;
+
+    @FXML
+    private Label lblTotalSupliers;
 
     @FXML
     void adminChartOnAction(MouseEvent event) {
@@ -214,6 +234,47 @@ public class AdminDashBoardController implements Initializable {
 
         tblAdminIssue.setItems(medicineService.getAll());
 
+        ObservableList<Medicine> all = medicineService.getAll();
+        int medicineCount=0;
+        int supplierCount=0;
+        for(Medicine med:all){
+            medicineCount++;
+            supplierCount++;
+
+        }
+        lblTotalMedicine.setText(String.valueOf(medicineCount));
+        lblTotalSupliers.setText(String.valueOf(supplierCount));
+        //add today revenue
+        ObservableList<Sale> allSales = salesService.getAll();
+        int sum=0;
+        for(Sale sales:allSales){
+            if(sales.getSaleDate().equals(LocalDate.now())){
+                sum+=sales.getTotal();
+            }
+
+        }
+        lblTodayRevenue.setText("Rs."+String.valueOf(sum));
+
+        ObservableList<Notification> allNotifications = notificationService.getAll();
+        int expireSoonCount=0;
+        LocalDate today=LocalDate.now();
+        LocalDate day;
+
+
+        for(Notification notification:allNotifications){
+            day=notification.getExpireDate();
+            long diff= ChronoUnit.DAYS.between(today,day);
+            if(diff>20){
+                expireSoonCount++;
+            }
+
+
+        }
+            lblNotification.setText(String.valueOf(expireSoonCount));
+
     }
+
+
+    
 
 }

@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class NotificationServiceImpl implements NotificationService {
-    NotificationRepository notificationRepository=new NotificationRepositoryImpl();
+    NotificationRepository  notificationRepository=new NotificationRepositoryImpl();
     ObservableList <Notification>list= FXCollections.observableArrayList();
     ObservableList<Notification>qtyList=FXCollections.observableArrayList();
     @Override
