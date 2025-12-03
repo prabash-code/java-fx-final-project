@@ -21,17 +21,17 @@
             <Image url="@../img/comDashboard.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnDashboard" layoutX="9.0" layoutY="61.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
-      <Button fx:id="btnMedicine" layoutX="4.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="156.0" text="Button" />
-      <Button fx:id="btnSupplies" layoutX="9.0" layoutY="132.0" mnemonicParsing="false" onAction="#bntSupplyOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
-      <Button fx:id="btnSales" layoutX="4.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="156.0" text="Button" />
-      <Button fx:id="btnSalesHistory" layoutX="7.0" layoutY="198.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
-      <Button fx:id="btnReports" layoutX="4.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="156.0" text="Button" />
-      <Button fx:id="btnNotification" layoutX="9.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
-      <Button fx:id="btnSetting" layoutX="9.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnSettingOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
-      <Button fx:id="btnLogout" layoutX="9.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="150.0" text="Button" />
-      <Separator layoutX="254.0" layoutY="280.0" prefHeight="18.0" prefWidth="796.0" />
-      <TableView fx:id="tblAdminIssue" layoutX="390.0" layoutY="306.0" prefHeight="114.0" prefWidth="525.0" style="-fx-background-color: D1D3D4;">
+      <Button fx:id="btnDashboard" layoutX="14.0" layoutY="93.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.0" prefHeight="26.0" prefWidth="218.0" text="Button" />
+      <Button fx:id="btnMedicine" layoutX="11.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" opacity="0.0" prefHeight="26.0" prefWidth="218.0" text="Button" />
+      <Button fx:id="btnSupplies" layoutX="11.0" layoutY="192.0" mnemonicParsing="false" onAction="#bntSupplyOnAction" opacity="0.0" prefHeight="26.0" prefWidth="218.0" text="Button" />
+      <Button fx:id="btnSales" layoutX="7.0" layoutY="245.0" mnemonicParsing="false" onAction="#btnSalesOnAction" opacity="0.0" prefHeight="26.0" prefWidth="218.0" text="Button" />
+      <Button fx:id="btnSalesHistory" layoutX="14.0" layoutY="293.0" mnemonicParsing="false" onAction="#btnSalesHistoryOnAction" opacity="0.0" prefHeight="26.0" prefWidth="218.0" text="Button" />
+      <Button fx:id="btnReports" layoutX="14.0" layoutY="343.0" mnemonicParsing="false" onAction="#btnReportsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="218.0" text="Button" />
+      <Button fx:id="btnNotification" layoutX="11.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnNotificationOnAction" opacity="0.0" prefHeight="26.0" prefWidth="218.0" text="Button" />
+      <Button fx:id="btnSetting" layoutX="11.0" layoutY="444.0" mnemonicParsing="false" onAction="#btnSettingOnAction" opacity="0.0" prefHeight="26.0" prefWidth="218.0" text="Button" />
+      <Button fx:id="btnLogout" layoutX="9.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="218.0" text="Button" />
+      <Separator layoutX="254.0" layoutY="271.0" prefHeight="18.0" prefWidth="796.0" />
+      <TableView fx:id="tblAdminIssue" layoutX="389.0" layoutY="286.0" prefHeight="114.0" prefWidth="525.0" style="-fx-background-color: D1D3D4;">
         <columns>
           <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
             <TableColumn fx:id="colName" prefWidth="115.0" text="Name" />
@@ -43,7 +43,7 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <BarChart fx:id="chartAdminSalesDetails" alternativeColumnFillVisible="true" barGap="3.0" layoutX="402.0" layoutY="426.0" prefHeight="176.0" prefWidth="500.0" title="Medicine QTY">
+      <BarChart fx:id="chartAdminSalesDetails" alternativeColumnFillVisible="true" barGap="3.0" layoutX="372.0" layoutY="402.0" prefHeight="195.0" prefWidth="548.0" title="Medicine QTY">
         <xAxis>
           <CategoryAxis endMargin="3.0" label="Category" prefHeight="30.0" prefWidth="417.0" side="BOTTOM" startMargin="0.0" tickLabelFill="#903434" tickLength="1.0">
                <tickLabelFont>

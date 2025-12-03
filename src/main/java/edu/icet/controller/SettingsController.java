@@ -53,6 +53,10 @@ public class SettingsController implements Initializable {
     @FXML
     private Button btnlogout;
 
+
+    @FXML
+    private Button btnChangeDetails;
+
     @FXML
     private TableColumn<?, ?> colEmail;
 
@@ -209,4 +213,14 @@ public class SettingsController implements Initializable {
         });
     }
 
+
+    public void btnChangeContactDetailsOnAction(ActionEvent actionEvent) {
+        Stage changeDetails=new Stage();
+        try {
+            changeDetails.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ChangeDetails.fxml"))));
+            changeDetails.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

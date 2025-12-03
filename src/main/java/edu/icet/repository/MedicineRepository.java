@@ -18,7 +18,7 @@ public interface MedicineRepository {
 
     void deleteMedicine(String text);
 
-    boolean updateQuantity(Connection connection, String itemId, int i);
+    boolean updateQuantity(Connection connection, String itemId, int id);
 
     ResultSet searchItemByName(Connection connection, String text);
 }

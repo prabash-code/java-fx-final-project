@@ -87,7 +87,7 @@ public class MedicineRepositoryImpl implements MedicineRepository {
             con=this.connection;
         }
         try {
-            PreparedStatement preparedStatement = con.prepareStatement("UPDATE medicine SET brand=?, supplierId=?, unitPrice=?, quantity=?, manufactureDate=?, expireDate=? name=? where medicineId=?");
+            PreparedStatement preparedStatement = con.prepareStatement("UPDATE medicine SET brand=?, supplierId=?, unitPrice=?, quantity=?, manufactureDate=?, expireDate=?, name=? where medicineId=?");
             preparedStatement.setObject(1, medicine.getBrand());
             preparedStatement.setObject(2, medicine.getSupplierId());
             preparedStatement.setObject(3, medicine.getUnitPrice());
@@ -116,7 +116,7 @@ public class MedicineRepositoryImpl implements MedicineRepository {
     }
 
     @Override
-    public boolean updateQuantity(Connection connection, String medicineId, int i) {
+    public boolean updateQuantity(Connection connection, String medicineId, int id) {
         Connection con=null;
 
         if(connection!=null){
@@ -127,7 +127,7 @@ public class MedicineRepositoryImpl implements MedicineRepository {
         }
         try {
             PreparedStatement preparedStatement = con.prepareStatement("UPDATE medicine SET quantity=? where medicineId=?");
-            preparedStatement.setObject(1, i);
+            preparedStatement.setObject(1,id);
             preparedStatement.setObject(2,medicineId);
             return preparedStatement.executeUpdate()>0;
 

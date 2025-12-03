@@ -55,7 +55,7 @@
             <TableColumn fx:id="colNotificationDate" text="Date" />
         </columns>
       </TableView>
-      <TextField fx:id="txtSearch" layoutX="611.0" layoutY="63.0" />
+      <TextField fx:id="txtSearch" alignment="CENTER" layoutX="611.0" layoutY="63.0" promptText="Medicine Name" />
       <Button fx:id="btnSearch" layoutX="774.0" layoutY="63.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="Search" />
       <Label layoutX="207.0" layoutY="188.0" text="Sales History">
          <font>

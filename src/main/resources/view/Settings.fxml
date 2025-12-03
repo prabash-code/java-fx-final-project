@@ -32,27 +32,28 @@
       <Button fx:id="btnNotifications" layoutX="6.0" layoutY="299.0" mnemonicParsing="false" onAction="#btnNotificationsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
       <Button fx:id="btnSettings" layoutX="10.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnSettingsOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
       <Button fx:id="btnlogout" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnlogoutOnAction" opacity="0.0" prefHeight="26.0" prefWidth="170.0" text="Button" />
-      <ImageView fitHeight="409.0" fitWidth="641.0" layoutX="183.0" layoutY="55.0" opacity="0.73" pickOnBounds="true">
+      <ImageView fitHeight="407.0" fitWidth="641.0" layoutX="183.0" layoutY="55.0" opacity="0.41" pickOnBounds="true">
          <image>
             <Image url="@../img/medicine-admin.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="74.0" prefHeight="22.0" prefWidth="178.0" text=" Remove Staff Member" textAlignment="JUSTIFY" textFill="#e5efea">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="74.0" prefHeight="22.0" prefWidth="178.0" text=" Remove Staff Member" textAlignment="JUSTIFY" textFill="#18833d">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Separator layoutX="200.0" layoutY="96.0" prefHeight="2.0" prefWidth="600.0" />
-      <TableView fx:id="tblStaff" layoutX="282.0" layoutY="118.0" opacity="0.88" prefHeight="200.0" prefWidth="445.0">
+      <TableView fx:id="tblStaff" layoutX="196.0" layoutY="118.0" opacity="0.88" prefHeight="200.0" prefWidth="445.0">
         <columns>
           <TableColumn fx:id="colStaffId" prefWidth="75.0" text="Staff ID" />
           <TableColumn fx:id="colName" prefWidth="144.00006103515625" text="Name" />
             <TableColumn fx:id="colEmail" prefWidth="224.80001220703127" text="Email" />
         </columns>
       </TableView>
-      <TextField fx:id="txtEmail" alignment="CENTER" layoutX="560.0" layoutY="399.0" promptText="Email" />
-      <TextField fx:id="txtId" alignment="CENTER" layoutX="227.0" layoutY="401.0" promptText="Staff Id" />
-      <TextField fx:id="txtName" alignment="CENTER" layoutX="394.0" layoutY="399.0" promptText="Name" />
-      <Button fx:id="btnDelete" layoutX="728.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="22.0" prefWidth="80.0" styleClass="btn-delete-settings" stylesheets="@../css/style.css" text="Delete" />
+      <TextField fx:id="txtEmail" alignment="CENTER" layoutX="189.0" layoutY="414.0" promptText="Email" />
+      <TextField fx:id="txtId" alignment="CENTER" layoutX="189.0" layoutY="332.0" promptText="Staff Id" />
+      <TextField fx:id="txtName" alignment="CENTER" layoutX="189.0" layoutY="375.0" promptText="Name" />
+      <Button fx:id="btnDelete" layoutX="378.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="22.0" prefWidth="80.0" styleClass="btn-delete-settings" stylesheets="@../css/style.css" text="Delete" />
+      <Button fx:id="btnChangeContactDetails" layoutX="671.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnChangeContactDetailsOnAction" prefHeight="25.0" prefWidth="140.0" styleClass="btn-contact-details" stylesheets="@../css/style.css" text="Change Details" />
    </children>
 </AnchorPane>

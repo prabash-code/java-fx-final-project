@@ -282,6 +282,22 @@
  }.invoice{
  -fx-background-color:#A8BBA3;
    -fx-background-radius: 6;
+ }.btn-contact-details{
+                        -fx-background-color:#31694E;
+                        -fx-text-fill:White;
+                        -fx-background-radius: 6;
+                        -fx-font-size: 10px;
+                        -fx-font-weight: bold;
+
+
+ }.btn-change-about{
+                            -fx-background-color:#31694E;
+                            -fx-text-fill:White;
+                            -fx-background-radius: 6;
+                            -fx-font-size: 10px;
+                            -fx-font-weight: bold;
+
+
  }
 
 

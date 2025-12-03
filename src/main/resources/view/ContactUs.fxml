@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="393.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.ContactUsController">
    <children>
-      <ImageView fitHeight="423.0" fitWidth="324.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="lblPhoneNumber" fitHeight="401.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/Contact.png" />
+            <Image url="@../img/contactUs.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblContactNumber" alignment="CENTER" layoutX="78.0" layoutY="109.0" prefHeight="18.0" prefWidth="202.0" text="Contact Number" textFill="#eae5e5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmail" alignment="CENTER" layoutX="82.0" layoutY="170.0" prefHeight="22.0" prefWidth="202.0" text="Email">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetwork" alignment="CENTER" layoutX="78.0" layoutY="229.0" prefHeight="22.0" prefWidth="210.0" text="Network" textFill="#f7f6f6">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAddress" alignment="CENTER" layoutX="82.0" layoutY="288.0" prefHeight="18.0" prefWidth="202.0" text="Address">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
